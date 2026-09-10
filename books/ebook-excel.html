@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Maîtriser Excel - De Débutant à Expert</title>
 <style>
+
   @media print{.no-print{display:none;}}
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Segoe UI',Arial,sans-serif;font-size:15px;line-height:1.8;color:#1a1a2e;background:#fff;}
@@ -39,177 +40,274 @@
   .contact-box{background:rgba(255,255,255,0.15);padding:24px 36px;border-radius:12px;display:inline-block;margin-top:16px;}
   .contact-box p{color:#fff;margin:6px 0;}
   .btn-print{position:fixed;bottom:24px;right:24px;background:#15803d;color:#fff;padding:12px 24px;border-radius:30px;font-weight:700;border:none;cursor:pointer;}
+
+  .highlight-box{background:#14532d;color:#bbf7d0;padding:24px;border-radius:12px;margin:24px 0;font-family:monospace;font-size:0.9rem;white-space:pre-wrap;}
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0;}
+  .stat-card{background:#f0fdf4;border:1px solid #86efac;padding:20px;border-radius:10px;text-align:center;}
+  .stat-card .num{font-size:1.8rem;font-weight:900;color:#15803d;}
+  .stat-card .label{font-size:0.82rem;color:#6b7280;margin-top:4px;}
+  .retenir p{margin:0;color:#14532d;}
+
 </style>
 </head>
 <body>
 <div class="cover">
-  <div class="cover-badge">📊 Guide Complet</div>
+  <div class="cover-badge">✨ Édition 2026</div>
   <div class="cover-icon">📊</div>
   <h1>Maîtriser Excel</h1>
-  <p class="subtitle">De débutant à expert en formules, tableaux croisés et automatisation</p>
+  <p class="subtitle">Formules, tableaux croisés, gestion en FCFA, graphiques et automatisation — de débutant à opérationnel</p>
   <div class="cover-contact">
-    <p><strong>📚 EbookShop</strong></p>
-    <p>📱 Moov : +229 01 58528627 &nbsp;|&nbsp; 📱 Celtis : +229 01 48212840</p>
+    <p><strong>📚 EbookShop — Votre librairie numérique</strong></p>
+    <p>📱 Moov : +229 01 58528627</p>
+    <p>📱 Celtis : +229 01 48212840</p>
   </div>
 </div>
 <div class="page">
 <div class="toc">
   <h2>📋 Table des Matières</h2>
   <ol>
-    <li><span>Ch. 1</span> — Découvrir l'interface Excel</li>
-    <li><span>Ch. 2</span> — Saisir et formater des données</li>
-    <li><span>Ch. 3</span> — Les formules essentielles</li>
-    <li><span>Ch. 4</span> — Graphiques et visualisations</li>
-    <li><span>Ch. 5</span> — Tableaux croisés dynamiques</li>
-    <li><span>Ch. 6</span> — Excel pour la comptabilité</li>
-    <li><span>Ch. 7</span> — Introduction aux macros</li>
-    <li><span>Ch. 8</span> — Analyse de données avancée</li>
+    <li><span>Chapitre 1</span> — Découvrir l'interface Excel</li>
+    <li><span>Chapitre 2</span> — Saisir et formater des données pro</li>
+    <li><span>Chapitre 3</span> — Les formules essentielles</li>
+    <li><span>Chapitre 4</span> — Graphiques et visualisations</li>
+    <li><span>Chapitre 5</span> — Tableaux croisés dynamiques</li>
+    <li><span>Chapitre 6</span> — Excel pour la comptabilité (FCFA)</li>
+    <li><span>Chapitre 7</span> — Macros et automatisation légère</li>
+    <li><span>Chapitre 8</span> — Analyse avancée + plan 21 jours</li>
   </ol>
 </div>
 
 <div class="chapter">
   <div class="chapter-num">Chapitre 1</div>
   <h2>Découvrir l'Interface Excel</h2>
-  <p>Microsoft Excel est le tableur le plus utilisé dans le monde professionnel. Maîtriser Excel, c'est avoir un avantage considérable dans n'importe quel emploi ou business. Voici les éléments clés de l'interface :</p>
+  <p>Microsoft Excel (et ses équivalents Google Sheets / LibreOffice Calc) est le tableur le plus utile dans le monde professionnel africain : stocks, salaires, notes, caisse, suivi de projets. Maîtriser Excel, c'est un avantage immédiat en emploi ou en business.</p>
+  <h3>Pourquoi Excel en Afrique de l'Ouest ?</h3>
+  <p>Banques, ONG, administrations, commerces et freelances s'en servent pour suivre les stocks, les salaires, les notes et les caisses Mobile Money. Un bon fichier remplace souvent un logiciel cher. Google Sheets complète Excel quand l'équipe est sur téléphone et que la collaboration compte.</p>
+  <p>Dans ce guide Édition 2026, chaque notion est illustrée avec des montants en FCFA et des cas boutique / école / freelance. L'objectif n'est pas de tout connaître, mais de devenir opérationnel en 21 jours.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="num">8</div><div class="label">Chapitres pratiques</div></div>
+    <div class="stat-card"><div class="num">FCFA</div><div class="label">Exemples locaux</div></div>
+    <div class="stat-card"><div class="num">21 j</div><div class="label">Pour devenir opérationnel</div></div>
+  </div>
   <ul class="liste">
-    <li><strong>Barre de formules :</strong> Affiche le contenu de la cellule sélectionnée. C'est ici que vous saisissez vos formules.</li>
-    <li><strong>Cellules :</strong> Chaque case identifiée par une lettre (colonne) et un chiffre (ligne). Ex : A1, B2, C10.</li>
-    <li><strong>Feuilles :</strong> Les onglets en bas. Un fichier Excel peut contenir plusieurs feuilles.</li>
-    <li><strong>Ruban :</strong> La barre d'outils en haut avec tous les boutons de mise en forme et outils.</li>
+    <li><strong>Barre de formules :</strong> affiche le contenu de la cellule ; c'est ici que vous tapez vos formules.</li>
+    <li><strong>Cellules :</strong> intersection colonne (lettre) × ligne (chiffre) — ex. A1, B2.</li>
+    <li><strong>Feuilles :</strong> onglets en bas ; un classeur peut contenir Ventes, Stock, Caisse…</li>
+    <li><strong>Ruban :</strong> Accueil, Insertion, Données, Formules — vos outils.</li>
+  </ul>
+  <h3>Excel vs Google Sheets</h3>
+  <ul class="liste">
+    <li><strong>Excel :</strong> puissant hors-ligne, TCD avancés, macros — idéal bureau.</li>
+    <li><strong>Sheets :</strong> collaboration + téléphone, gratuit avec compte Google — idéal équipe.</li>
+    <li>Les formules de base sont quasi identiques (parfois noms anglais dans Sheets).</li>
   </ul>
   <div class="retenir">
-    <strong>💡 Raccourcis indispensables</strong>
-    <p>Ctrl+S = Sauvegarder | Ctrl+C = Copier | Ctrl+V = Coller | Ctrl+Z = Annuler | Ctrl+F = Rechercher | Ctrl+Flèche = Naviguer rapidement</p>
+    <strong>💡 À Retenir</strong>
+    <p>Raccourcis : Ctrl+S sauvegarder · Ctrl+C/V copier-coller · Ctrl+Z annuler · Ctrl+F rechercher · Ctrl+Flèche naviguer au bord des données.</p>
   </div>
 </div>
 
 <div class="chapter">
   <div class="chapter-num">Chapitre 2</div>
-  <h2>Saisir et Formater des Données</h2>
-  <p>La qualité d'un tableau Excel commence par une bonne organisation des données. Voici les bonnes pratiques :</p>
+  <h2>Saisir et Formater des Données Pro</h2>
+  <p>La qualité d'un fichier commence par une structure propre. Sans structure, les formules et TCD cassent.</p>
   <ul class="liste">
-    <li>Une ligne d'en-tête claire (Nom, Prénom, Montant, Date...)</li>
+    <li>Une ligne d'en-tête claire (Nom, Produit, Quantité, Prix, Date…)</li>
     <li>Chaque colonne = un type d'information</li>
     <li>Chaque ligne = un enregistrement</li>
     <li>Pas de lignes vides à l'intérieur du tableau</li>
+    <li>Dates au format Date, montants en nombres (pas « 5000F » dans la cellule calculée)</li>
   </ul>
   <table class="table-exemple">
     <tr><th>Nom</th><th>Produit</th><th>Quantité</th><th>Prix unitaire</th><th>Total</th></tr>
-    <tr><td>Amadou</td><td>Savon</td><td>10</td><td>500 FCFA</td><td>5 000 FCFA</td></tr>
-    <tr><td>Fatima</td><td>Huile</td><td>5</td><td>800 FCFA</td><td>4 000 FCFA</td></tr>
-    <tr><td>Jean</td><td>Farine</td><td>20</td><td>300 FCFA</td><td>6 000 FCFA</td></tr>
+    <tr><td>Amadou</td><td>Savon</td><td>10</td><td>500</td><td>5 000</td></tr>
+    <tr><td>Fatima</td><td>Huile</td><td>5</td><td>800</td><td>4 000</td></tr>
+    <tr><td>Jean</td><td>Farine</td><td>20</td><td>300</td><td>6 000</td></tr>
   </table>
+  <h3>Mise en forme utile</h3>
+  <ul class="liste">
+    <li>Figez la première ligne : Affichage → Figer les volets</li>
+    <li>Convertir en Tableau (Ctrl+T) : filtres + styles auto</li>
+    <li>Séparateur de milliers pour les FCFA</li>
+    <li>Couleurs d'en-tête sobres (vert / bleu) — pas 8 couleurs flashy</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Stockez les montants en nombres purs. Ajoutez « FCFA » dans l'en-tête ou le format personnalisé, jamais collé dans chaque cellule si vous voulez sommer.</p>
+  </div>
 </div>
 
 <div class="chapter">
   <div class="chapter-num">Chapitre 3</div>
   <h2>Les Formules Essentielles</h2>
   <h3>Formules de base</h3>
-  <div class="formule">=SOMME(A1:A10)         → Additionne les cellules A1 à A10
-=MOYENNE(B1:B10)       → Calcule la moyenne
-=MAX(C1:C10)           → Valeur maximale
-=MIN(C1:C10)           → Valeur minimale
-=NB(D1:D10)            → Compte les cellules non vides
-=NBVAL(D1:D10)         → Compte les cellules avec texte ou nombres</div>
-  <h3>La formule SI (très importante)</h3>
+  <div class="formule">=SOMME(A1:A10)
+=MOYENNE(B1:B10)
+=MAX(C1:C10) / =MIN(C1:C10)
+=NB(D1:D10) / =NBVAL(D1:D10)
+=AUJOURDHUI()  → date du jour</div>
+  <h3>SI — décisions automatiques</h3>
   <div class="formule">=SI(A1>=10; "Reçu"; "Échoué")
-→ Si A1 est supérieur ou égal à 10, afficher "Reçu", sinon "Échoué"
-
-=SI(B2>1000000; "VIP"; SI(B2>500000; "Standard"; "Basic"))
-→ SI imbriqués pour plusieurs conditions</div>
-  <h3>RECHERCHEV — La formule star</h3>
-  <div class="formule">=RECHERCHEV(valeur_cherchée; tableau; numéro_colonne; 0)
-
-Exemple : Trouver le prix d'un produit à partir de son code :
-=RECHERCHEV(A2; $F$2:$H$100; 2; 0)</div>
+=SI(B2>1000000; "VIP"; SI(B2>500000; "Standard"; "Basic"))</div>
+  <h3>RECHERCHEV / RECHERCHEX</h3>
+  <div class="formule">=RECHERCHEV(A2; $F$2:$H$100; 2; 0)
+→ trouve le prix à partir d'un code produit
+(Préférez RECHERCHEX si disponible — plus flexible)</div>
+  <h3>SOMME.SI et NB.SI (gestion boutique)</h3>
+  <div class="formule">=SOMME.SI(Catégorie; "Ventes"; Montant)
+=NB.SI(Statut; "Payé")
+→ total des ventes ou nombre de commandes payées</div>
   <div class="retenir">
     <strong>💡 À Retenir</strong>
-    <p>Toute formule Excel commence par le signe = (égal). Sans ce signe, Excel considère le contenu comme du texte simple, pas une formule.</p>
+    <p>Toute formule commence par =. Sans ce signe, Excel traite le contenu comme du texte. Vérifiez toujours avec un calcul manuel sur 3 lignes.</p>
   </div>
 </div>
 
 <div class="chapter">
   <div class="chapter-num">Chapitre 4</div>
   <h2>Graphiques et Visualisations</h2>
-  <p>Un graphique communique en quelques secondes ce qu'un tableau de chiffres met des minutes à expliquer. Excel propose une dizaine de types de graphiques.</p>
+  <p>Un graphique communique en secondes ce qu'un tableau met des minutes à expliquer — utile pour un patron, un bailleur ou un client.</p>
   <h3>Créer un graphique en 3 clics</h3>
   <ul class="liste">
-    <li>1. Sélectionnez vos données (en-têtes inclus)</li>
-    <li>2. Onglet "Insertion" → "Graphiques recommandés"</li>
-    <li>3. Choisissez le type → OK</li>
+    <li>Sélectionnez vos données (en-têtes inclus)</li>
+    <li>Insertion → Graphiques recommandés</li>
+    <li>Choisissez le type → OK → ajoutez un titre clair</li>
   </ul>
-  <h3>Quel graphique pour quelle situation ?</h3>
+  <h3>Quel graphique choisir ?</h3>
   <ul class="liste">
-    <li>📊 <strong>Histogramme/Barres :</strong> Comparer des catégories (ventes par produit)</li>
-    <li>📈 <strong>Courbes :</strong> Évolution dans le temps (ventes mensuelles)</li>
-    <li>🥧 <strong>Secteurs (camembert) :</strong> Parts d'un tout (répartition du budget)</li>
-    <li>🔵 <strong>Nuage de points :</strong> Corrélation entre deux variables</li>
+    <li>📊 <strong>Barres :</strong> comparer des catégories (ventes par produit)</li>
+    <li>📈 <strong>Courbes :</strong> évolution dans le temps (CA mensuel)</li>
+    <li>🥧 <strong>Secteurs :</strong> parts d'un tout (répartition budget) — max 5–6 parts</li>
+    <li>🔵 <strong>Combiné :</strong> CA (barres) + objectif (ligne)</li>
   </ul>
+  <h3>Erreurs à éviter</h3>
+  <ul class="liste">
+    <li>Camembert à 15 parts illisibles</li>
+    <li>Effets 3D inutiles</li>
+    <li>Titre vague (« Graphique 1 ») au lieu de « Ventes Q1 2026 — Cotonou »</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Un bon graphique répond à une question. Avant d'insérer, écrivez la question : « Quel produit tire mon CA ce mois-ci ? »</p>
+  </div>
 </div>
 
 <div class="chapter">
   <div class="chapter-num">Chapitre 5</div>
   <h2>Tableaux Croisés Dynamiques</h2>
-  <p>Le tableau croisé dynamique (TCD) est l'outil le plus puissant d'Excel. Il permet d'analyser des milliers de lignes de données en quelques secondes, sans une seule formule.</p>
+  <p>Le TCD analyse des milliers de lignes sans formules complexes. Indispensable pour stocks, notes d'élèves, ventes multi-produits.</p>
   <h3>Créer un TCD en 4 étapes</h3>
   <ul class="liste">
-    <li>1. Cliquez dans votre tableau de données</li>
-    <li>2. Insertion → Tableau croisé dynamique → OK</li>
-    <li>3. Faites glisser les champs dans les zones (Lignes, Colonnes, Valeurs, Filtres)</li>
-    <li>4. Excel calcule tout automatiquement !</li>
+    <li>Cliquez dans votre tableau de données (idéalement « Format Tableau »)</li>
+    <li>Insertion → Tableau croisé dynamique → OK</li>
+    <li>Glissez les champs : Lignes, Colonnes, Valeurs, Filtres</li>
+    <li>Changez la synthèse (Somme, Nombre, Moyenne) selon le besoin</li>
+  </ul>
+  <div class="highlight-box">Exemple boutique :
+Lignes = Produit
+Colonnes = Mois
+Valeurs = Somme du CA
+Filtre = Ville
+→ Top produits par mois en 30 secondes</div>
+  <h3>Astuces TCD</h3>
+  <ul class="liste">
+    <li>Actualiser après ajout de données (clic droit → Actualiser)</li>
+    <li>Grouper les dates par mois / trimestre</li>
+    <li>Afficher % du total pour voir la contribution</li>
   </ul>
   <div class="retenir">
     <strong>💡 À Retenir</strong>
-    <p>Avec un TCD, vous pouvez en 30 secondes répondre à : "Quels sont mes 5 meilleurs clients ?", "Quel produit se vend le mieux en saison des pluies ?", "Quelle est ma marge par catégorie ?"</p>
+    <p>Avec un TCD : « Top 5 clients », « produit saison des pluies », « marge par catégorie » — en moins d'une minute.</p>
   </div>
 </div>
 
 <div class="chapter">
   <div class="chapter-num">Chapitre 6</div>
-  <h2>Excel pour la Comptabilité et la Gestion</h2>
-  <h3>Modèle de suivi des dépenses</h3>
+  <h2>Excel pour la Comptabilité (FCFA)</h2>
+  <p>Voici un modèle simple de trésorerie pour boutique ou freelance.</p>
   <table class="table-exemple">
     <tr><th>Date</th><th>Description</th><th>Catégorie</th><th>Dépense</th><th>Recette</th><th>Solde</th></tr>
-    <tr><td>01/01</td><td>Stock marchandises</td><td>Achats</td><td>50 000</td><td></td><td>=F1-E2+D1</td></tr>
-    <tr><td>03/01</td><td>Vente client Amadou</td><td>Ventes</td><td></td><td>25 000</td><td>=F2-E3+D2</td></tr>
-    <tr><td>05/01</td><td>Loyer boutique</td><td>Charges</td><td>15 000</td><td></td><td>=F3-E4+D3</td></tr>
+    <tr><td>01/01</td><td>Stock marchandises</td><td>Achats</td><td>50 000</td><td></td><td>…</td></tr>
+    <tr><td>03/01</td><td>Vente client Amadou</td><td>Ventes</td><td></td><td>25 000</td><td>…</td></tr>
+    <tr><td>05/01</td><td>Loyer boutique</td><td>Charges</td><td>15 000</td><td></td><td>…</td></tr>
   </table>
-  <p>Ce modèle simple vous permet de suivre votre trésorerie en temps réel. Ajoutez une ligne par transaction, le solde se calcule automatiquement.</p>
+  <h3>Formules de solde</h3>
+  <div class="formule">Solde_ligne = Solde_précédent - Dépense + Recette
+Total dépenses = SOMME(colonne Dépense)
+CA du mois = SOMME.SI(Catégorie;"Ventes";Recette)</div>
+  <h3>Feuilles recommandées</h3>
+  <ul class="liste">
+    <li><strong>Caisse :</strong> mouvements quotidiens</li>
+    <li><strong>Stock :</strong> entrées / sorties / alerte seuil</li>
+    <li><strong>Clients :</strong> créances (qui doit quoi)</li>
+    <li><strong>Dashboard :</strong> TCD + graphiques du mois</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Séparez caisse perso et caisse business dès le premier fichier. Mélanger les deux rend tout pilotage impossible.</p>
+  </div>
 </div>
 
 <div class="chapter">
   <div class="chapter-num">Chapitre 7</div>
-  <h2>Introduction aux Macros</h2>
-  <p>Les macros permettent d'automatiser des tâches répétitives. Plutôt que de refaire les mêmes manipulations chaque semaine, vous enregistrez une macro et vous l'exécutez en un clic.</p>
-  <h3>Enregistrer une macro simple</h3>
+  <h2>Macros et Automatisation Légère</h2>
+  <p>Les macros enregistrent des gestes répétitifs (mise en forme hebdo, export PDF, nettoyage). Commencez par l'enregistreur — pas besoin de coder.</p>
+  <h3>Enregistrer une macro</h3>
   <ul class="liste">
-    <li>1. Onglet "Développeur" → "Enregistrer une macro"</li>
-    <li>2. Donnez-lui un nom et un raccourci clavier (Ex : Ctrl+Maj+F)</li>
-    <li>3. Effectuez les actions à automatiser</li>
-    <li>4. Cliquez "Arrêter l'enregistrement"</li>
-    <li>5. Appuyez sur votre raccourci pour rejouer la macro !</li>
+    <li>Onglet Développeur → Enregistrer une macro</li>
+    <li>Nom + raccourci (ex. Ctrl+Maj+F)</li>
+    <li>Effectuez les actions une fois</li>
+    <li>Arrêter l'enregistrement → rejouer via le raccourci</li>
   </ul>
+  <h3>Sans macro : gains rapides</h3>
+  <ul class="liste">
+    <li>Modèles (.xltx) réutilisables chaque mois</li>
+    <li>Validation des données (listes déroulantes Catégorie)</li>
+    <li>Protection de feuille (éviter qu'un collègue casse les formules)</li>
+    <li>Google Sheets : IMPORTRANGE pour lier plusieurs fichiers</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Automatisez seulement ce que vous faites chaque semaine. Une macro mal testée peut supprimer des données — gardez des copies.</p>
+  </div>
 </div>
 
 <div class="chapter">
   <div class="chapter-num">Chapitre 8</div>
-  <h2>Analyse de Données Avancée</h2>
-  <h3>La mise en forme conditionnelle</h3>
-  <p>Colorez automatiquement vos cellules selon leur valeur. Ex : rouge si ventes < objectif, vert si ventes > objectif. Sélectionnez les cellules → Accueil → Mise en forme conditionnelle.</p>
-  <h3>Les filtres et tris avancés</h3>
-  <p>Filtrez vos données en un clic : Données → Filtrer. Ensuite, cliquez sur la flèche de chaque colonne pour filtrer par valeur, couleur ou condition.</p>
-  <h3>La fonction SIERREUR</h3>
-  <div class="formule">=SIERREUR(RECHERCHEV(A2;Tableau;2;0); "Non trouvé")
-→ Évite l'affichage des erreurs #N/A dans vos tableaux</div>
+  <h2>Analyse Avancée + Plan 21 Jours</h2>
+  <h3>Mise en forme conditionnelle</h3>
+  <p>Rouge si stock &lt; seuil, vert si objectif atteint : Accueil → Mise en forme conditionnelle.</p>
+  <h3>Filtres et SIERREUR</h3>
+  <div class="formule">Données → Filtrer
+=SIERREUR(RECHERCHEV(A2;Tableau;2;0); "Non trouvé")</div>
+  <h3>Plan 21 jours</h3>
+  <ul class="liste">
+    <li><strong>J1–J7 :</strong> interface + tableau propre ventes + SOMME / SI</li>
+    <li><strong>J8–J14 :</strong> RECHERCHEV + graphique + fichier caisse FCFA</li>
+    <li><strong>J15–J21 :</strong> 1 TCD + mise en forme conditionnelle + modèle du mois suivant</li>
+  </ul>
+  <h3>Erreurs à éviter</h3>
+  <ul class="liste">
+    <li>Fusionner des cellules au milieu des données (casse TCD)</li>
+    <li>Plusieurs tableaux sur la même feuille sans séparation claire</li>
+    <li>Oublier de sauvegarder (OneDrive / Drive / clé USB)</li>
+  </ul>
+  <div class="highlight-box">Exercice final :
+1. Listez 30 ventes fictives (produit, qty, prix, date, ville)
+2. Calculez le total par formule
+3. Créez un TCD par produit
+4. Ajoutez un graphique des 5 meilleurs produits</div>
   <div class="retenir">
     <strong>💡 À Retenir</strong>
-    <p>Un fichier Excel bien construit peut vous faire économiser des heures de travail chaque semaine. Investissez 2-3 heures pour créer vos modèles une fois, puis bénéficiez-en à vie.</p>
+    <p>Un fichier Excel bien construit vous fait gagner des heures chaque semaine. Investissez 2–3 heures pour créer vos modèles — puis réutilisez-les à vie.</p>
   </div>
 </div>
 
 <div class="back-cover">
-  <h2>📊 Félicitations, vous maîtrisez Excel !</h2>
+  <h2>📊 Merci pour votre lecture !</h2>
   <p>Ces compétences valent de l'or sur le marché du travail africain et international.</p>
+  <p>Pour acquérir nos autres e-books ou nous contacter :</p>
   <div class="contact-box">
     <p>📱 <strong>Moov :</strong> +229 01 58528627</p>
     <p>📱 <strong>Celtis :</strong> +229 01 48212840</p>
