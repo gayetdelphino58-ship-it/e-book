@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sécurité Numérique pour Tous</title>
+<style>
+  @media print { .no-print{display:none;} body{margin:0;} }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',Arial,sans-serif;font-size:15px;line-height:1.8;color:#1a1a2e;background:#fff;}
+  .cover{background:linear-gradient(135deg,#0f172a 0%,#1e293b 40%,#7f1d1d 100%);color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 40px;page-break-after:always;}
+  .cover-badge{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);padding:8px 24px;border-radius:20px;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:32px;}
+  .cover h1{font-size:3.2rem;font-weight:900;line-height:1.1;margin-bottom:20px;background:linear-gradient(90deg,#fff,#fca5a5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+  .cover .subtitle{font-size:1.2rem;color:#fecaca;max-width:520px;margin:0 auto 40px;}
+  .cover-icon{font-size:5rem;margin-bottom:24px;}
+  .cover-contact{margin-top:48px;background:rgba(255,255,255,0.1);padding:20px 36px;border-radius:12px;font-size:0.9rem;}
+  .cover-contact p{margin:4px 0;color:#fee2e2;}
+  .page{max-width:800px;margin:0 auto;padding:60px 48px;}
+  .toc{background:#fef2f2;border-left:4px solid #dc2626;padding:32px 40px;border-radius:0 12px 12px 0;margin:40px 0;page-break-after:always;}
+  .toc h2{color:#dc2626;margin-bottom:20px;font-size:1.4rem;}
+  .toc ol{padding-left:20px;}
+  .toc li{padding:6px 0;font-size:1rem;color:#374151;}
+  .toc li span{color:#dc2626;font-weight:600;}
+  .chapter{page-break-before:always;margin-bottom:60px;}
+  .chapter-num{color:#dc2626;font-size:0.85rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+  .chapter h2{font-size:1.9rem;font-weight:800;color:#1a1a2e;margin-bottom:24px;border-bottom:3px solid #dc2626;padding-bottom:12px;}
+  .chapter h3{font-size:1.15rem;font-weight:700;color:#dc2626;margin:28px 0 10px;}
+  .chapter p{margin-bottom:16px;color:#374151;}
+  .retenir{background:linear-gradient(135deg,#fef2f2,#fee2e2);border-left:4px solid #dc2626;padding:20px 24px;border-radius:0 10px 10px 0;margin:24px 0;}
+  .retenir strong{color:#dc2626;display:block;margin-bottom:8px;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;}
+  .retenir p{margin:0;color:#7f1d1d;}
+  ul.liste{margin:12px 0 20px 20px;}
+  ul.liste li{padding:5px 0;color:#374151;}
+  ul.liste li::marker{color:#dc2626;}
+  .highlight-box{background:#0f172a;color:#fecaca;padding:24px;border-radius:12px;margin:24px 0;font-family:monospace;font-size:0.9rem;}
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0;}
+  .stat-card{background:#fef2f2;border:1px solid #fca5a5;padding:20px;border-radius:10px;text-align:center;}
+  .stat-card .num{font-size:1.8rem;font-weight:900;color:#dc2626;}
+  .stat-card .label{font-size:0.82rem;color:#6b7280;margin-top:4px;}
+  .back-cover{background:linear-gradient(135deg,#0f172a,#b91c1c);color:#fff;padding:60px 48px;text-align:center;margin-top:60px;border-radius:16px;}
+  .back-cover h2{font-size:1.8rem;margin-bottom:16px;}
+  .back-cover p{color:#fecaca;margin-bottom:24px;}
+  .contact-box{background:rgba(255,255,255,0.15);padding:24px 36px;border-radius:12px;display:inline-block;margin-top:16px;}
+  .contact-box p{color:#fff;font-size:1rem;margin:6px 0;}
+  .btn-print{position:fixed;bottom:24px;right:24px;background:#dc2626;color:#fff;padding:12px 24px;border-radius:30px;font-weight:700;border:none;cursor:pointer;font-size:0.95rem;box-shadow:0 4px 16px rgba(0,0,0,0.25);}
+</style>
+</head>
+<body>
+
+<!-- COUVERTURE -->
+<div class="cover">
+  <div class="cover-badge">✨ Édition 2026</div>
+  <div class="cover-icon">🔐</div>
+  <h1>Sécurité Numérique pour Tous</h1>
+  <p class="subtitle">Mots de passe, 2FA, arnaques WhatsApp & Mobile Money, Wi‑Fi public et sauvegardes — protégez-vous simplement</p>
+  <div class="cover-contact">
+    <p><strong>📚 EbookShop — Votre librairie numérique</strong></p>
+    <p>📱 Moov : +229 01 58528627</p>
+    <p>📱 Celtis : +229 01 48212840</p>
+  </div>
+</div>
+
+<div class="page">
+
+<!-- TABLE DES MATIÈRES -->
+<div class="toc">
+  <h2>📋 Table des Matières</h2>
+  <ol>
+    <li><span>Chapitre 1</span> — Pourquoi la sécurité numérique vous concerne</li>
+    <li><span>Chapitre 2</span> — Mots de passe et gestionnaire</li>
+    <li><span>Chapitre 3</span> — Activer la double authentification (2FA)</li>
+    <li><span>Chapitre 4</span> — Arnaques WhatsApp et Mobile Money</li>
+    <li><span>Chapitre 5</span> — Wi‑Fi public, apps et mises à jour</li>
+    <li><span>Chapitre 6</span> — Sauvegardes et plan en cas de piratage</li>
+  </ol>
+</div>
+
+<!-- CHAPITRE 1 -->
+<div class="chapter">
+  <div class="chapter-num">Chapitre 1</div>
+  <h2>Pourquoi la sécurité numérique vous concerne</h2>
+  <p>Vous n'avez pas besoin d'être « quelqu'un d'important » pour être ciblé. Les arnaques WhatsApp, le piratage de comptes Facebook, les transferts Mobile Money frauduleux et le vol de photos touchent des étudiants, des commerçants et des familles chaque semaine en Afrique de l'Ouest.</p>
+  <p>Bonne nouvelle : 80% des risques se réduisent avec des gestes simples — mots de passe solides, double authentification, méfiance face aux liens, Wi‑Fi public prudent, sauvegardes.</p>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="num">2FA</div><div class="label">Coupe la plupart des piratages de comptes</div></div>
+    <div class="stat-card"><div class="num">12+</div><div class="label">Caractères minimum recommandés</div></div>
+    <div class="stat-card"><div class="num">1×/sem</div><div class="label">Sauvegarde photos & docs clés</div></div>
+  </div>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>La cybersécurité personnelle, c'est de l'hygiène : comme se laver les mains. Pas de panique, des réflexes.</p>
+  </div>
+</div>
+
+<!-- CHAPITRE 2 -->
+<div class="chapter">
+  <div class="chapter-num">Chapitre 2</div>
+  <h2>Mots de passe et gestionnaire</h2>
+  <p>Un mot de passe unique et long par compte critique (email, Facebook, banque, Mobile Money app). Réutiliser le même mot de passe partout, c'est offrir toutes vos clés sur un plateau.</p>
+  <h3>Recette d'un bon mot de passe</h3>
+  <ul class="liste">
+    <li>Au moins 12 caractères (idéalement 16+)</li>
+    <li>Mélange lettres, chiffres, symboles — ou une phrase secrète</li>
+    <li>Jamais votre date de naissance, nom d'enfant, « benin2024 »</li>
+    <li>Jamais envoyé par SMS/WhatsApp à quelqu'un qui « s'occupe de votre compte »</li>
+  </ul>
+  <div class="highlight-box">Phrase exemple :
+« MonTaxi@Cotonou_court_vite_7km! »
+Facile à retenir pour vous, dure à deviner.
+
+Mieux : utilisez un gestionnaire (Bitwarden gratuit, Google Password Manager)
+→ 1 mot de passe maître + tous les autres générés.</div>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Changez en priorité le mot de passe de l'email : c'est la clé de réinitialisation de presque tout le reste.</p>
+  </div>
+</div>
+
+<!-- CHAPITRE 3 -->
+<div class="chapter">
+  <div class="chapter-num">Chapitre 3</div>
+  <h2>Activer la double authentification (2FA)</h2>
+  <p>La 2FA ajoute un second verrou : même si quelqu'un a votre mot de passe, il lui manque le code temporaire.</p>
+  <h3>Où l'activer en priorité</h3>
+  <ul class="liste">
+    <li>Google / Gmail</li>
+    <li>WhatsApp (authentification à deux facteurs + PIN)</li>
+    <li>Facebook / Instagram</li>
+    <li>Apple ID / compte Microsoft</li>
+    <li>Applications bancaires et fintech</li>
+  </ul>
+  <h3>SMS vs application d'authentification</h3>
+  <p>Le SMS vaut mieux que rien, mais une app (Google Authenticator, Authy) est plus sûre face au SIM swap. Gardez des codes de secours imprimés dans un endroit sûr.</p>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Activez la 2FA WhatsApp aujourd'hui : Paramètres → Compte → Authentification à deux facteurs. Choisissez un PIN que vous n'oubliez pas.</p>
+  </div>
+</div>
+
+<!-- CHAPITRE 4 -->
+<div class="chapter">
+  <div class="chapter-num">Chapitre 4</div>
+  <h2>Arnaques WhatsApp et Mobile Money</h2>
+  <p>Les escrocs imitent les proches, les services clients Moov/MTN/Orange, les livreurs, les « gains à la loterie », les faux acheteurs.</p>
+  <h3>Signaux d'alerte</h3>
+  <ul class="liste">
+    <li>« Envoie un code que tu as reçu par SMS » (c'est souvent votre 2FA)</li>
+    <li>« Ton compte sera suspendu, clique ici »</li>
+    <li>Pression / urgence / menace</li>
+    <li>Demande de transfert pour « tester » ou « valider » un compte</li>
+    <li>Offre trop belle (iPhone à 50 000 FCFA, héritage, emploi sans entretien)</li>
+  </ul>
+  <h3>Conduite à tenir</h3>
+  <ul class="liste">
+    <li>Raccrochez / ne cliquez pas. Vérifiez par un autre canal (appel connu).</li>
+    <li>Ne communiquez jamais codes OTP, PIN Moov, photos de pièce sauf canal officiel vérifié.</li>
+    <li>Pour Mobile Money : confirmez toujours le nom du destinataire avant d'envoyer.</li>
+    <li>Signalez le numéro et bloquez.</li>
+  </ul>
+  <div class="highlight-box">Règle d'or :
+On ne VOUS demande JAMAIS votre code secret.
+Ni Moov, ni WhatsApp, ni une banque sérieuse.
+Si on le demande → arnaque.</div>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>La précipitation est l'arme de l'escroc. Quand c'est urgent et émotionnel, ralentissez et vérifiez.</p>
+  </div>
+</div>
+
+<!-- CHAPITRE 5 -->
+<div class="chapter">
+  <div class="chapter-num">Chapitre 5</div>
+  <h2>Wi‑Fi public, apps et mises à jour</h2>
+  <p>Les Wi‑Fi de cafés, gares et aéroports peuvent être observés ou usurpés. Évitez-y les opérations sensibles (Mobile Money, banque, mots de passe).</p>
+  <h3>Bonnes pratiques</h3>
+  <ul class="liste">
+    <li>Préférez la data mobile pour les paiements.</li>
+    <li>Désactivez le partage automatique de Wi‑Fi.</li>
+    <li>Installez les apps depuis Play Store / App Store uniquement.</li>
+    <li>Acceptez les mises à jour système : elles corrigent des failles.</li>
+    <li>Vérifiez les permissions (une lampe de poche n'a pas besoin de vos contacts).</li>
+    <li>Verrouillez l'écran (PIN / empreinte / visage) — toujours.</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Un téléphone à jour + écran verrouillé + apps officielles élimine une grande partie des infections « faciles ».</p>
+  </div>
+</div>
+
+<!-- CHAPITRE 6 -->
+<div class="chapter">
+  <div class="chapter-num">Chapitre 6</div>
+  <h2>Sauvegardes et plan en cas de piratage</h2>
+  <p>Perte, vol, panne, ransomware : sans sauvegarde, vos photos, contacts clients et documents disparaissent. Avec sauvegarde, ce n'est qu'un désagrément.</p>
+  <h3>Que sauvegarder ?</h3>
+  <ul class="liste">
+    <li>Photos et vidéos importantes (Google Photos / iCloud)</li>
+    <li>Contacts (sync Google)</li>
+    <li>Documents business (Drive, copies PDF)</li>
+    <li>Liste des comptes critiques + preuve que la 2FA est active</li>
+  </ul>
+  <h3>Si vous êtes piraté</h3>
+  <ul class="liste">
+    <li>Changez le mot de passe email depuis un appareil sain</li>
+    <li>Activez/réactivez la 2FA, déconnectez les sessions inconnues</li>
+    <li>Prévenez vos contacts si votre WhatsApp a spamé</li>
+    <li>Contactez l'opérateur Mobile Money en cas de transfert frauduleux</li>
+    <li>Portez plainte si montants importants</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Cette semaine : 2FA WhatsApp + email, mots de passe uniques, sauvegarde photos. Trois gestes, protection massive. La sécurité, c'est maintenant — pas après l'incident.</p>
+  </div>
+</div>
+
+<!-- PAGE DE FIN -->
+<div class="back-cover">
+  <h2>📚 Merci pour votre lecture !</h2>
+  <p>Cet e-book vous a-t-il été utile ? Partagez-le avec vos proches et collègues.</p>
+  <p>Pour acquérir nos autres e-books ou nous contacter :</p>
+  <div class="contact-box">
+    <p>📱 <strong>Moov :</strong> +229 01 58528627</p>
+    <p>📱 <strong>Celtis :</strong> +229 01 48212840</p>
+    <p>🌐 <strong>EbookShop</strong> — Votre librairie numérique</p>
+  </div>
+</div>
+
+</div>
+
+<button class="btn-print no-print" onclick="window.print()">🖨️ Sauvegarder en PDF</button>
+</body>
+</html>
