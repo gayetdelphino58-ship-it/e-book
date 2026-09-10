@@ -14,6 +14,24 @@ img { max-width: 100%; }
 button { font-family: inherit; }
 .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
+/* ===== ICONS (inline SVG) ===== */
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+  color: currentColor;
+}
+.icon-sm { width: 16px; height: 16px; }
+.icon-md { width: 20px; height: 20px; }
+.icon-lg { width: 24px; height: 24px; }
+.cover-icon {
+  display: block;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+
 /* ===== HEADER ===== */
 .header {
   background: #ffffff;
@@ -35,8 +53,13 @@ button { font-family: inherit; }
   font-weight: 700;
   color: #0f172a;
   letter-spacing: -0.03em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
+.logo .icon { color: #1e3a5f; width: 22px; height: 22px; }
 .logo:hover { color: #1e3a5f; }
+.logo:hover .icon { color: #2563eb; }
 .nav { display: flex; gap: 28px; align-items: center; }
 .nav a {
   color: #64748b;
@@ -73,7 +96,10 @@ button { font-family: inherit; }
 
 /* ===== BUTTONS ===== */
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: 600;
@@ -82,6 +108,7 @@ button { font-family: inherit; }
   border: none;
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
+.btn .icon { flex-shrink: 0; }
 .btn-primary { background: #0f172a; color: #fff; }
 .btn-primary:hover { background: #1e3a5f; }
 .btn-outline {
@@ -151,7 +178,12 @@ button { font-family: inherit; }
   transition: background 0.15s;
   margin-top: 16px;
   width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
+.btn-pack .icon { width: 18px; height: 18px; }
 .btn-pack:hover { background: #1e3a5f; }
 
 /* ===== HERO ===== */
@@ -228,19 +260,17 @@ button { font-family: inherit; }
 }
 .feature-card:hover { border-color: #cbd5e1; }
 .feature-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   background: #f1f5f9;
   color: #1e3a5f;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
 }
+.feature-icon .icon { width: 22px; height: 22px; color: #1e3a5f; }
 .feature-card h3 {
   font-size: 0.95rem;
   margin-bottom: 6px;
@@ -275,7 +305,7 @@ button { font-family: inherit; }
   margin-bottom: 36px;
 }
 .filter-btn {
-  padding: 7px 16px;
+  padding: 7px 14px;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
   background: #fff;
@@ -285,7 +315,11 @@ button { font-family: inherit; }
   transition: background 0.15s, border-color 0.15s, color 0.15s;
   color: #64748b;
   font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
+.filter-btn .icon { width: 14px; height: 14px; opacity: 0.85; }
 .filter-btn:hover { border-color: #cbd5e1; color: #0f172a; }
 .filter-btn.active {
   background: #0f172a;
@@ -320,12 +354,19 @@ button { font-family: inherit; }
   justify-content: center;
   background: #1e3a5f;
 }
+.cover-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .cover-mark {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #fff;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   opacity: 0.95;
 }
 .book-info {
@@ -399,7 +440,9 @@ button { font-family: inherit; }
   align-items: center;
 }
 .pack-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: #f1f5f9;
   color: #1e3a5f;
   padding: 4px 10px;
@@ -410,6 +453,7 @@ button { font-family: inherit; }
   text-transform: uppercase;
   margin-bottom: 12px;
 }
+.pack-badge .icon { width: 14px; height: 14px; color: #2563eb; }
 .pack-offer h3 {
   font-size: 1.35rem;
   font-weight: 700;
@@ -481,8 +525,13 @@ button { font-family: inherit; }
   justify-content: center;
   font-size: 0.85rem;
   font-weight: 700;
-  margin: 0 0 14px;
+  margin: 0 0 10px;
 }
+.step-icon {
+  color: #1e3a5f;
+  margin-bottom: 10px;
+}
+.step-icon .icon { width: 22px; height: 22px; color: #1e3a5f; }
 .step h4 {
   font-size: 0.95rem;
   font-weight: 600;
@@ -573,12 +622,10 @@ button { font-family: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
   color: #94a3b8;
   flex-shrink: 0;
 }
+.contact-card-icon .icon { width: 20px; height: 20px; color: #94a3b8; }
 .contact-card strong { display: block; font-size: 0.95rem; margin-bottom: 2px; }
 .contact-card span { display: block; font-size: 1rem; font-weight: 600; }
 .contact-card small {
@@ -606,6 +653,7 @@ button { font-family: inherit; }
   margin-bottom: 28px;
 }
 .footer-brand .logo { color: #fff; font-size: 1.1rem; }
+.footer-brand .logo .icon { color: #94a3b8; }
 .footer-brand p {
   font-size: 0.85rem;
   margin-top: 8px;
@@ -664,20 +712,18 @@ button { font-family: inherit; }
   right: 24px;
   background: #128c7e;
   color: #fff;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
   box-shadow: 0 2px 12px rgba(15, 23, 42, 0.2);
   z-index: 200;
   transition: background 0.15s;
   text-decoration: none;
 }
+.whatsapp-float .icon { width: 22px; height: 22px; color: #fff; }
 .whatsapp-float:hover { background: #0f766e; }
 
 /* ===== PAGE PANIER ===== */
