@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mon Panier — EbookShop</title>
+  <title>Panier — EbookShop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,20 +14,20 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">📚 EbookShop</a>
+      <a href="index.html" class="logo">EbookShop</a>
       <nav class="nav">
         <a href="index.html">Accueil</a>
         <a href="index.html#catalogue">Catalogue</a>
         <a href="index.html#contact">Contact</a>
-        <a href="cart.html" class="btn-cart">🛒 Panier <span class="cart-count" id="cartCount">0</span></a>
+        <a href="cart.html" class="btn-cart">Panier <span class="cart-count" id="cartCount">0</span></a>
       </nav>
     </div>
   </header>
 
   <!-- CONTENU PANIER -->
-  <section style="padding: 60px 0; min-height: 70vh;">
+  <section style="padding: 56px 0; min-height: 70vh; background:#f8fafc;">
     <div class="container">
-      <h1 class="page-title">Mon Panier</h1>
+      <h1 class="page-title">Panier</h1>
       <p class="page-sub" id="itemCount">0 article(s)</p>
 
       <div class="cart-layout">
@@ -42,7 +45,7 @@
           </div>
           <div class="summary-row">
             <span>Livraison</span>
-            <span style="color:#059669; font-weight:600;">Gratuite</span>
+            <span style="color:#0f172a; font-weight:600;">Gratuite</span>
           </div>
           <div class="summary-row">
             <span>TVA (20%)</span>
@@ -65,15 +68,15 @@
 
           <!-- BOUTON PAIEMENT -->
           <button class="btn btn-success" onclick="checkout()">
-            🔒 Payer maintenant
+            Payer maintenant
           </button>
-          <p style="font-size:0.8rem; color:#57606a; text-align:center; margin-top:10px;">Paiement 100% sécurisé · SSL</p>
+          <p style="font-size:0.8rem; color:#64748b; text-align:center; margin-top:10px;">Paiement sécurisé</p>
         </div>
       </div>
 
       <!-- CONTINUER LES ACHATS -->
-      <div style="margin-top: 32px;">
-        <a href="index.html#catalogue" style="color:#4f46e5; font-weight:600;">← Continuer mes achats</a>
+      <div class="cart-continue">
+        <a href="index.html#catalogue">← Continuer mes achats</a>
       </div>
     </div>
   </section>
@@ -81,16 +84,32 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p>© 2025 EbookShop — Tous droits réservés | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo">EbookShop</span>
+          <p>Librairie numérique professionnelle</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#catalogue">Catalogue</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="cart.html">Panier</a>
+        </div>
+        <div class="footer-contact">
+          <p>+229 01 58528627 (Moov)</p>
+          <p>+229 01 48212840 (Celtis)</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 EbookShop — Tous droits réservés · <a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></p>
+      </div>
     </div>
   </footer>
 
   <!-- MODALE DE CONFIRMATION -->
-  <div id="checkoutModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:200; align-items:center; justify-content:center;">
-    <div style="background:#fff; border-radius:16px; padding:48px 40px; max-width:480px; width:90%; text-align:center;">
-      <div style="font-size:3rem; margin-bottom:16px;">🎉</div>
-      <h2 style="margin-bottom:12px; color:#059669;">Commande confirmée !</h2>
-      <p style="color:#57606a; margin-bottom:24px;">Merci pour votre achat ! Vous recevrez un email avec vos liens de téléchargement sous quelques minutes.</p>
+  <div id="checkoutModal" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.55); z-index:200; align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:10px; padding:40px 32px; max-width:480px; width:90%; text-align:center; border:1px solid #e2e8f0;">
+      <h2 style="margin-bottom:12px; color:#0f172a; font-size:1.25rem;">Commande confirmée</h2>
+      <p style="color:#64748b; margin-bottom:24px;">Merci pour votre achat. Vous recevrez un email avec vos liens de téléchargement sous quelques minutes.</p>
       <button class="btn btn-primary" onclick="closeModal()">Retour à la boutique</button>
     </div>
   </div>
@@ -105,20 +124,20 @@
       const msg = document.getElementById('promoMsg');
       if (code === 'EBOOK10') {
         msg.style.color = '#059669';
-        msg.textContent = '✅ Code appliqué : -10% sur votre commande !';
+        msg.textContent = 'Code appliqué : -10% sur votre commande.';
       } else if (code === '') {
         msg.style.color = '#dc2626';
         msg.textContent = 'Veuillez entrer un code.';
       } else {
         msg.style.color = '#dc2626';
-        msg.textContent = '❌ Code invalide.';
+        msg.textContent = 'Code invalide.';
       }
     }
 
     function checkout() {
       const cart = getCart();
       if (cart.length === 0) {
-        showToast('⚠️ Votre panier est vide !');
+        showToast('Votre panier est vide.');
         return;
       }
       const modal = document.getElementById('checkoutModal');

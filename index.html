@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EbookShop — Votre librairie numérique</title>
+  <title>EbookShop — Librairie numérique professionnelle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,11 +14,11 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">📚 EbookShop</a>
+      <a href="index.html" class="logo">EbookShop</a>
       <nav class="nav">
         <a href="#catalogue">Catalogue</a>
         <a href="#contact">Contact</a>
-        <a href="cart.html" class="btn-cart">🛒 Panier <span class="cart-count" id="cartCount">0</span></a>
+        <a href="cart.html" class="btn-cart">Panier <span class="cart-count" id="cartCount">0</span></a>
       </nav>
     </div>
   </header>
@@ -23,17 +26,17 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-content">
-      <div class="hero-badge">🔥 15 e-books · Promo jusqu’au 10 novembre 2026</div>
-      <h1>La connaissance qui change votre vie</h1>
-      <p>Des e-books de qualité professionnelle sur l'IA, la technologie, le business, la santé et plus encore. Téléchargement immédiat après achat.</p>
+      <div class="hero-badge">15 e-books · Offre promotionnelle jusqu’au 10 novembre 2026</div>
+      <h1>Ressources professionnelles pour progresser</h1>
+      <p>E-books structurés sur l’IA, la technologie, le business et le développement personnel. Accès immédiat après confirmation du paiement.</p>
       <div class="hero-btns">
-        <a href="#catalogue" class="btn btn-primary">📚 Voir le catalogue</a>
-        <a href="#contact" class="btn btn-outline">📞 Nous contacter</a>
+        <a href="#catalogue" class="btn btn-primary">Voir le catalogue</a>
+        <a href="#contact" class="btn btn-outline">Nous contacter</a>
       </div>
       <div class="hero-stats">
-        <div><strong>15+</strong><span>E-books</span></div>
-        <div><strong>100%</strong><span>En français</span></div>
-        <div><strong>⚡</strong><span>Téléchargement instantané</span></div>
+        <div><strong>15</strong><span>E-books au catalogue</span></div>
+        <div><strong>100%</strong><span>Contenu en français</span></div>
+        <div><strong>24h</strong><span>Accès après validation</span></div>
       </div>
     </div>
   </section>
@@ -42,24 +45,24 @@
   <section class="features">
     <div class="container features-grid">
       <div class="feature-card">
-        <div class="feature-icon">⚡</div>
+        <div class="feature-icon">DL</div>
         <h3>Téléchargement immédiat</h3>
-        <p>Recevez votre e-book en quelques secondes. Lisez-le sur PC, tablette ou smartphone.</p>
+        <p>Recevez votre e-book dès validation. Compatible PC, tablette et smartphone.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🌍</div>
-        <h3>Livraison mondiale</h3>
-        <p>Commandez depuis n'importe quel pays. Mobile Money, WhatsApp, paiement simple.</p>
+        <div class="feature-icon">WW</div>
+        <h3>Commande simplifiée</h3>
+        <p>WhatsApp et Mobile Money. Processus clair, sans compte obligatoire.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🏆</div>
-        <h3>Contenu de qualité</h3>
-        <p>Chaque livre est soigneusement rédigé avec des exemples concrets et des exercices pratiques.</p>
+        <div class="feature-icon">QL</div>
+        <h3>Contenu professionnel</h3>
+        <p>Guides structurés avec exemples concrets et exercices applicables.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📱</div>
-        <h3>Support WhatsApp</h3>
-        <p>Une question ? Contactez-nous directement sur WhatsApp. Réponse rapide garantie.</p>
+        <div class="feature-icon">WA</div>
+        <h3>Support dédié</h3>
+        <p>Assistance WhatsApp pour vos commandes, codes d’accès et questions.</p>
       </div>
     </div>
   </section>
@@ -67,38 +70,38 @@
   <!-- CATALOGUE -->
   <section class="catalogue" id="catalogue">
     <div class="container">
-      <h2 class="section-title">Notre Catalogue Complet</h2>
-      <p class="section-sub">15 e-books de qualité — Promo limitée : 500F · 700F · 800F · 1 000F — jusqu’au <strong>10 novembre 2026</strong></p>
+      <h2 class="section-title">Catalogue</h2>
+      <p class="section-sub">15 e-books — Tarifs promotionnels : 500F · 700F · 800F · 1 000F — jusqu’au <strong>10 novembre 2026</strong></p>
 
       <!-- FILTRES -->
       <div class="filters">
         <button class="filter-btn active" onclick="filterBooks('all', event)">Tous (15)</button>
-        <button class="filter-btn" onclick="filterBooks('tech', event)">💻 Technologie</button>
-        <button class="filter-btn" onclick="filterBooks('business', event)">🚀 Business</button>
-        <button class="filter-btn" onclick="filterBooks('sante', event)">🌿 Santé</button>
-        <button class="filter-btn" onclick="filterBooks('perso', event)">🧠 Développement perso</button>
-        <button class="filter-btn" onclick="filterBooks('geo', event)">🗺️ Géomatique</button>
+        <button class="filter-btn" onclick="filterBooks('tech', event)">Technologie</button>
+        <button class="filter-btn" onclick="filterBooks('business', event)">Business</button>
+        <button class="filter-btn" onclick="filterBooks('sante', event)">Santé</button>
+        <button class="filter-btn" onclick="filterBooks('perso', event)">Développement perso</button>
+        <button class="filter-btn" onclick="filterBooks('geo', event)">Géomatique</button>
       </div>
 
       <div class="books-grid" id="booksGrid">
 
         <!-- 1. IA -->
         <div class="book-card" data-cat="tech">
-          <div class="book-cover" style="background:linear-gradient(135deg,#1a1a2e,#4f46e5);">
-            <span>🤖</span>
+          <div class="book-cover" style="background:#1e3a5f;">
+            <span class="cover-mark">IA</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Intelligence Artificielle</span>
             <h3 class="book-title">L'Intelligence Artificielle pour Tous</h3>
             <p class="book-desc">Comprendre et utiliser l'IA en 2025 — ChatGPT, Machine Learning, opportunités en Afrique.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(128 avis)</span></div>
+            <div class="book-rating">Note 4,8/5 · 128 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">500 FCFA</span>
                 <span class="book-price-old">2 500 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('L\'IA pour Tous', '500 FCFA', 'ebook-ia')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('L\'IA pour Tous', '500 FCFA', 'ebook-ia')">Commander</button>
               </div>
             </div>
           </div>
@@ -106,21 +109,21 @@
 
         <!-- 2. Python -->
         <div class="book-card" data-cat="tech">
-          <div class="book-cover" style="background:linear-gradient(135deg,#064e3b,#f59e0b);">
-            <span>🐍</span>
+          <div class="book-cover" style="background:#1e4d3d;">
+            <span class="cover-mark">PY</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Programmation</span>
             <h3 class="book-title">Apprendre Python en 30 Jours</h3>
             <p class="book-desc">Du zéro au développeur opérationnel. Exercices pratiques, projets réels inclus.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(96 avis)</span></div>
+            <div class="book-rating">Note 4,8/5 · 96 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">700 FCFA</span>
                 <span class="book-price-old">3 000 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Python en 30 Jours', '700 FCFA', 'ebook-python')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Python en 30 Jours', '700 FCFA', 'ebook-python')">Commander</button>
               </div>
             </div>
           </div>
@@ -128,21 +131,21 @@
 
         <!-- 3. Business -->
         <div class="book-card" data-cat="business">
-          <div class="book-cover" style="background:linear-gradient(135deg,#92400e,#f59e0b);">
-            <span>🚀</span>
+          <div class="book-cover" style="background:#3d3420;">
+            <span class="cover-mark">BZ</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Entrepreneuriat</span>
             <h3 class="book-title">Lancer son Business en Afrique</h3>
             <p class="book-desc">De l'idée au premier client. Guide complet pour entrepreneurs africains ambitieux 2025.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(214 avis)</span></div>
+            <div class="book-rating">Note 4,9/5 · 214 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">800 FCFA</span>
                 <span class="book-price-old">2 500 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Business en Afrique', '800 FCFA', 'ebook-business')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Business en Afrique', '800 FCFA', 'ebook-business')">Commander</button>
               </div>
             </div>
           </div>
@@ -150,21 +153,21 @@
 
         <!-- 4. Santé -->
         <div class="book-card" data-cat="sante">
-          <div class="book-cover" style="background:linear-gradient(135deg,#14532d,#22c55e);">
-            <span>🌿</span>
+          <div class="book-cover" style="background:#1e3d2f;">
+            <span class="cover-mark">SN</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Santé & Bien-être</span>
             <h3 class="book-title">Santé Naturelle & Plantes Africaines</h3>
             <p class="book-desc">Soignez-vous avec la nature. 15 plantes médicinales, remèdes prouvés, recettes naturelles.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(187 avis)</span></div>
+            <div class="book-rating">Note 4,8/5 · 187 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">1 000 FCFA</span>
                 <span class="book-price-old">3 000 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Santé Naturelle & Plantes Africaines', '1 000 FCFA', 'ebook-sante')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Santé Naturelle & Plantes Africaines', '1 000 FCFA', 'ebook-sante')">Commander</button>
               </div>
             </div>
           </div>
@@ -172,21 +175,21 @@
 
         <!-- 5. Marketing -->
         <div class="book-card" data-cat="business">
-          <div class="book-cover" style="background:linear-gradient(135deg,#7c0a02,#f43f5e);">
-            <span>📣</span>
+          <div class="book-cover" style="background:#3d1e2a;">
+            <span class="cover-mark">MK</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Marketing Digital</span>
             <h3 class="book-title">Marketing Digital</h3>
             <p class="book-desc">Attirer des clients et vendre en ligne. Facebook Ads, WhatsApp Business, réseaux sociaux.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(153 avis)</span></div>
+            <div class="book-rating">Note 4,7/5 · 153 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">500 FCFA</span>
                 <span class="book-price-old">2 500 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Marketing Digital', '500 FCFA', 'ebook-marketing')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Marketing Digital', '500 FCFA', 'ebook-marketing')">Commander</button>
               </div>
             </div>
           </div>
@@ -194,21 +197,21 @@
 
         <!-- 6. Excel -->
         <div class="book-card" data-cat="tech">
-          <div class="book-cover" style="background:linear-gradient(135deg,#14532d,#22c55e);">
-            <span>📊</span>
+          <div class="book-cover" style="background:#1a3d2e;">
+            <span class="cover-mark">XL</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Bureautique</span>
             <h3 class="book-title">Maîtriser Excel</h3>
             <p class="book-desc">De débutant à expert. Formules, tableaux croisés dynamiques, macros et analyse de données.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(241 avis)</span></div>
+            <div class="book-rating">Note 4,9/5 · 241 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">700 FCFA</span>
                 <span class="book-price-old">3 000 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Maîtriser Excel', '700 FCFA', 'ebook-excel')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Maîtriser Excel', '700 FCFA', 'ebook-excel')">Commander</button>
               </div>
             </div>
           </div>
@@ -216,21 +219,21 @@
 
         <!-- 7. Développement perso -->
         <div class="book-card" data-cat="perso">
-          <div class="book-cover" style="background:linear-gradient(135deg,#3b0764,#f59e0b);">
-            <span>🦋</span>
+          <div class="book-cover" style="background:#2d1e3d;">
+            <span class="cover-mark">DP</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Développement Personnel</span>
             <h3 class="book-title">Se Réinventer — 21 Jours</h3>
             <p class="book-desc">Transformer sa vie, ses habitudes et atteindre ses objectifs. Plan d'action concret sur 21 jours.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(309 avis)</span></div>
+            <div class="book-rating">Note 4,9/5 · 309 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">800 FCFA</span>
                 <span class="book-price-old">2 500 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Se Réinventer — 21 Jours', '800 FCFA', 'ebook-developpement-perso')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Se Réinventer — 21 Jours', '800 FCFA', 'ebook-developpement-perso')">Commander</button>
               </div>
             </div>
           </div>
@@ -238,21 +241,21 @@
 
         <!-- 8. Crypto -->
         <div class="book-card" data-cat="business">
-          <div class="book-cover" style="background:linear-gradient(135deg,#0c0c0c,#f59e0b);">
-            <span>₿</span>
+          <div class="book-cover" style="background:#1e293b;">
+            <span class="cover-mark">CR</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Finance & Crypto</span>
             <h3 class="book-title">Crypto-monnaies 2025</h3>
             <p class="book-desc">Bitcoin, Ethereum, DeFi, investir intelligemment. Guide complet pour débutants africains.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(178 avis)</span></div>
+            <div class="book-rating">Note 4,7/5 · 178 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">1 000 FCFA</span>
                 <span class="book-price-old">3 000 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Crypto-monnaies 2025', '1 000 FCFA', 'ebook-crypto')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Crypto-monnaies 2025', '1 000 FCFA', 'ebook-crypto')">Commander</button>
               </div>
             </div>
           </div>
@@ -260,21 +263,21 @@
 
         <!-- 9. Réseaux -->
         <div class="book-card" data-cat="tech">
-          <div class="book-cover" style="background:linear-gradient(135deg,#0c1445,#0891b2);">
-            <span>🌐</span>
+          <div class="book-cover" style="background:#1e3a4f;">
+            <span class="cover-mark">NET</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Informatique</span>
             <h3 class="book-title">Réseaux Informatiques</h3>
             <p class="book-desc">Comprendre et configurer les réseaux. OSI, TCP/IP, WiFi, sécurité réseau, certification CCNA.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(92 avis)</span></div>
+            <div class="book-rating">Note 4,6/5 · 92 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">500 FCFA</span>
                 <span class="book-price-old">2 500 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Réseaux Informatiques', '500 FCFA', 'ebook-reseaux')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Réseaux Informatiques', '500 FCFA', 'ebook-reseaux')">Commander</button>
               </div>
             </div>
           </div>
@@ -282,21 +285,21 @@
 
         <!-- 10. Géomatique -->
         <div class="book-card" data-cat="geo">
-          <div class="book-cover" style="background:linear-gradient(135deg,#052e16,#0891b2);">
-            <span>🗺️</span>
+          <div class="book-cover" style="background:#1e3d35;">
+            <span class="cover-mark">GEO</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Géomatique & SIG</span>
             <h3 class="book-title">Introduction à la Géomatique</h3>
             <p class="book-desc">SIG, télédétection, GPS et cartographie. Applications africaines, QGIS, carrières en géomatique.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(67 avis)</span></div>
+            <div class="book-rating">Note 4,6/5 · 67 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">700 FCFA</span>
                 <span class="book-price-old">3 000 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Introduction à la Géomatique', '700 FCFA', 'ebook-geomatique')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Introduction à la Géomatique', '700 FCFA', 'ebook-geomatique')">Commander</button>
               </div>
             </div>
           </div>
@@ -305,21 +308,21 @@
 
         <!-- 11. WhatsApp Business -->
         <div class="book-card" data-cat="business">
-          <div class="book-cover" style="background:linear-gradient(135deg,#065f46,#10b981);">
-            <span>💬</span>
+          <div class="book-cover" style="background:#1e3d32;">
+            <span class="cover-mark">WA</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Business & Vente</span>
             <h3 class="book-title">WhatsApp Business qui Convertit</h3>
             <p class="book-desc">Catalogue, réponses auto, funnels et Mobile Money — le système complet pour vendre chaque jour en Afrique.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(142 avis)</span></div>
+            <div class="book-rating">Note 4,8/5 · 142 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">800 FCFA</span>
                 <span class="book-price-old">2 500 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('WhatsApp Business qui Convertit', '800 FCFA', 'ebook-whatsapp-business')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('WhatsApp Business qui Convertit', '800 FCFA', 'ebook-whatsapp-business')">Commander</button>
               </div>
             </div>
           </div>
@@ -327,21 +330,21 @@
 
         <!-- 12. Finance perso -->
         <div class="book-card" data-cat="business">
-          <div class="book-cover" style="background:linear-gradient(135deg,#0c2340,#d97706);">
-            <span>💰</span>
+          <div class="book-cover" style="background:#1e2d3d;">
+            <span class="cover-mark">FIN</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Finance personnelle</span>
             <h3 class="book-title">Gérer son Argent en Afrique</h3>
             <p class="book-desc">Budget en FCFA, épargne, tontine vs banque, dettes et plan 90 jours — reprenez le contrôle concrètement.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(201 avis)</span></div>
+            <div class="book-rating">Note 4,8/5 · 201 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">1 000 FCFA</span>
                 <span class="book-price-old">3 000 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Gérer son Argent en Afrique', '1 000 FCFA', 'ebook-finance-perso')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Gérer son Argent en Afrique', '1 000 FCFA', 'ebook-finance-perso')">Commander</button>
               </div>
             </div>
           </div>
@@ -349,21 +352,21 @@
 
         <!-- 13. Canva -->
         <div class="book-card" data-cat="tech">
-          <div class="book-cover" style="background:linear-gradient(135deg,#4a044e,#ec4899);">
-            <span>🎨</span>
+          <div class="book-cover" style="background:#3d1e35;">
+            <span class="cover-mark">CV</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Design & Marketing</span>
             <h3 class="book-title">Canva pour Entrepreneurs</h3>
             <p class="book-desc">Posts, flyers, branding et templates — créez des visuels pro en 20 minutes, sans être graphiste.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(176 avis)</span></div>
+            <div class="book-rating">Note 4,7/5 · 176 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">500 FCFA</span>
                 <span class="book-price-old">2 500 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Canva pour Entrepreneurs', '500 FCFA', 'ebook-canva')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Canva pour Entrepreneurs', '500 FCFA', 'ebook-canva')">Commander</button>
               </div>
             </div>
           </div>
@@ -371,21 +374,21 @@
 
         <!-- 14. Productivité -->
         <div class="book-card" data-cat="perso">
-          <div class="book-cover" style="background:linear-gradient(135deg,#134e4a,#2dd4bf);">
-            <span>⚡</span>
+          <div class="book-cover" style="background:#1e3d3a;">
+            <span class="cover-mark">PR</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Développement Personnel</span>
             <h3 class="book-title">Productivité Sans Stress</h3>
             <p class="book-desc">MITs, deep work, routines matin/soir et maîtrise du téléphone — avancez calmement avec des outils gratuits.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(163 avis)</span></div>
+            <div class="book-rating">Note 4,7/5 · 163 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">700 FCFA</span>
                 <span class="book-price-old">3 000 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Productivité Sans Stress', '700 FCFA', 'ebook-productivite')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Productivité Sans Stress', '700 FCFA', 'ebook-productivite')">Commander</button>
               </div>
             </div>
           </div>
@@ -393,21 +396,21 @@
 
         <!-- 15. Cybersécurité -->
         <div class="book-card" data-cat="tech">
-          <div class="book-cover" style="background:linear-gradient(135deg,#0f172a,#b91c1c);">
-            <span>🔐</span>
+          <div class="book-cover" style="background:#334155;">
+            <span class="cover-mark">SEC</span>
           </div>
           <div class="book-info">
             <span class="book-cat">Sécurité & Tech</span>
             <h3 class="book-title">Sécurité Numérique pour Tous</h3>
             <p class="book-desc">Mots de passe, 2FA, arnaques WhatsApp/Mobile Money, Wi‑Fi public et sauvegardes — protégez-vous simplement.</p>
-            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(118 avis)</span></div>
+            <div class="book-rating">Note 4,7/5 · 118 avis</div>
             <div class="book-footer">
               <div>
                 <span class="book-price">800 FCFA</span>
                 <span class="book-price-old">2 500 FCFA</span>
               </div>
               <div class="book-actions">
-                <button class="btn btn-add" onclick="commanderLivre('Sécurité Numérique pour Tous', '800 FCFA', 'ebook-cybersecurite')">🛒 Commander</button>
+                <button class="btn btn-add" onclick="commanderLivre('Sécurité Numérique pour Tous', '800 FCFA', 'ebook-cybersecurite')">Commander</button>
               </div>
             </div>
           </div>
@@ -418,20 +421,20 @@
       <!-- OFFRE PACK -->
       <div class="pack-offer">
         <div class="pack-left">
-          <div class="pack-badge">🔥 OFFRE SPÉCIALE</div>
+          <div class="pack-badge">Offre catalogue</div>
           <h3>Pack Complet — Les 15 E-books</h3>
-          <p>Économisez plus de 50% en achetant tous nos livres en un seul pack !</p>
+          <p>Accédez à l’ensemble du catalogue à un tarif groupé préférentiel.</p>
           <ul>
-            <li>✅ Les 15 e-books en PDF/HTML</li>
-            <li>✅ Mises à jour gratuites à vie</li>
-            <li>✅ Support WhatsApp prioritaire</li>
+            <li>Les 15 e-books en PDF/HTML</li>
+            <li>Mises à jour gratuites à vie</li>
+            <li>Support WhatsApp prioritaire</li>
           </ul>
         </div>
         <div class="pack-right">
           <div class="pack-price-old">25 000 FCFA</div>
           <div class="pack-price">8 000 FCFA</div>
           <button class="btn btn-pack" onclick="contactWhatsApp('Pack Complet 15 E-books - 8000 FCFA — promo jusqu\'au 10 nov. 2026')">
-            📱 Commander via WhatsApp
+            Commander via WhatsApp
           </button>
         </div>
       </div>
@@ -442,9 +445,9 @@
   <!-- COMMENT COMMANDER -->
   <section class="how-to">
     <div class="container">
-      <h2 class="section-title">Comment Commander ?</h2>
+      <h2 class="section-title">Comment commander</h2>
       <div class="steps-grid">
-        <div class="step"><div class="step-num">1</div><h4>Choisissez votre livre</h4><p>Parcourez notre catalogue et sélectionnez le(s) livre(s) qui vous intéressent.</p></div>
+        <div class="step"><div class="step-num">1</div><h4>Choisissez votre livre</h4><p>Parcourez le catalogue et sélectionnez le(s) titre(s) qui vous intéressent.</p></div>
         <div class="step"><div class="step-num">2</div><h4>Contactez-nous</h4><p>Envoyez-nous le titre par WhatsApp sur l'un de nos numéros.</p></div>
         <div class="step"><div class="step-num">3</div><h4>Payez simplement</h4><p>Paiement par Moov Money ou Celtis. Paiement rapide et sécurisé.</p></div>
         <div class="step"><div class="step-num">4</div><h4>Recevez votre livre</h4><p>Votre e-book vous est envoyé immédiatement après confirmation du paiement.</p></div>
@@ -455,21 +458,21 @@
   <!-- TÉMOIGNAGES -->
   <section class="testimonials">
     <div class="container">
-      <h2 class="section-title">Ce que disent nos lecteurs</h2>
+      <h2 class="section-title">Avis lecteurs</h2>
       <div class="testi-grid">
         <div class="testi-card">
-          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
-          <p>"Le livre sur le Business en Afrique m'a donné exactement les outils que je cherchais. J'ai lancé mon activité de vente de savons naturels 3 semaines après !"</p>
+          <div class="testi-stars">Note 5/5</div>
+          <p>« Le livre sur le Business en Afrique m'a donné exactement les outils que je cherchais. J'ai lancé mon activité de vente de savons naturels 3 semaines après ! »</p>
           <strong>— Aminata K., Cotonou</strong>
         </div>
         <div class="testi-card">
-          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
-          <p>"Python en 30 Jours est le meilleur guide que j'ai trouvé en français. Les exemples sont clairs, j'ai créé mon premier programme dès le chapitre 2 !"</p>
+          <div class="testi-stars">Note 5/5</div>
+          <p>« Python en 30 Jours est le meilleur guide que j'ai trouvé en français. Les exemples sont clairs, j'ai créé mon premier programme dès le chapitre 2. »</p>
           <strong>— Rodrigue M., Porto-Novo</strong>
         </div>
         <div class="testi-card">
-          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
-          <p>"J'ai commandé le Pack Complet et c'est un excellent investissement. Le livre sur les cryptos seul vaut 10x le prix. Merci EbookShop !"</p>
+          <div class="testi-stars">Note 5/5</div>
+          <p>« J'ai commandé le Pack Complet et c'est un excellent investissement. Le livre sur les cryptos seul vaut largement le prix. Merci EbookShop. »</p>
           <strong>— Ibrahim S., Parakou</strong>
         </div>
       </div>
@@ -479,11 +482,11 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container contact-inner">
-      <h2>📞 Contactez-nous</h2>
-      <p>Pour commander, pour toute question ou pour un devis groupé, contactez-nous directement :</p>
+      <h2>Contact</h2>
+      <p>Pour commander, poser une question ou demander un devis groupé :</p>
       <div class="contact-cards">
         <a href="https://wa.me/22901585286" class="contact-card whatsapp" onclick="return true;">
-          <div class="contact-card-icon">📱</div>
+          <div class="contact-card-icon">MOOV</div>
           <div>
             <strong>Moov Money</strong>
             <span>+229 01 58528627</span>
@@ -491,7 +494,7 @@
           </div>
         </a>
         <a href="https://wa.me/22901482128" class="contact-card celtis">
-          <div class="contact-card-icon">📱</div>
+          <div class="contact-card-icon">CEL</div>
           <div>
             <strong>Celtis</strong>
             <span>+229 01 48212840</span>
@@ -499,7 +502,7 @@
           </div>
         </a>
       </div>
-      <p style="margin-top:24px; color:#c7d2fe; font-size:0.9rem;">Nous répondons généralement dans l'heure · Paiement Mobile Money accepté</p>
+      <p class="contact-note">Réponse généralement sous une heure · Paiement Mobile Money accepté</p>
     </div>
   </section>
 
@@ -508,8 +511,8 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <span class="logo" style="font-size:1.2rem;">📚 EbookShop</span>
-          <p>Votre librairie numérique africaine</p>
+          <span class="logo">EbookShop</span>
+          <p>Librairie numérique professionnelle</p>
         </div>
         <div class="footer-links">
           <a href="#catalogue">Catalogue</a>
@@ -517,8 +520,8 @@
           <a href="cart.html">Panier</a>
         </div>
         <div class="footer-contact">
-          <p>📱 +229 01 58528627 (Moov)</p>
-          <p>📱 +229 01 48212840 (Celtis)</p>
+          <p>+229 01 58528627 (Moov)</p>
+          <p>+229 01 48212840 (Celtis)</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -531,47 +534,46 @@
   <div class="toast" id="toast"></div>
 
   <!-- BOUTON WHATSAPP FLOTTANT -->
-  <a href="https://wa.me/22901585286" class="whatsapp-float" title="Commander via WhatsApp">💬</a>
+  <a href="https://wa.me/22901585286" class="whatsapp-float" title="Commander via WhatsApp">WA</a>
 
   <!-- ===== MODALE COMMANDE ===== -->
-  <div id="modalCommande" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:300; align-items:center; justify-content:center; padding:20px;">
-    <div style="background:#fff; border-radius:20px; padding:36px 32px; max-width:480px; width:100%; position:relative;">
-      <button onclick="fermerModal()" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#9ca3af;">✕</button>
+  <div id="modalCommande" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.55); z-index:300; align-items:center; justify-content:center; padding:20px;">
+    <div style="background:#fff; border-radius:10px; padding:32px 28px; max-width:480px; width:100%; position:relative; border:1px solid #e2e8f0;">
+      <button onclick="fermerModal()" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:1.25rem;cursor:pointer;color:#94a3b8;">✕</button>
       <div style="text-align:center; margin-bottom:24px;">
-        <div style="font-size:2.5rem; margin-bottom:8px;">🔒</div>
-        <h2 style="font-size:1.3rem; color:#1e1b4b;" id="modalTitre">Titre du livre</h2>
-        <p style="color:#4f46e5; font-size:1.4rem; font-weight:800; margin:6px 0;" id="modalPrix">0 FCFA</p>
+        <h2 style="font-size:1.2rem; color:#0f172a; font-weight:700;" id="modalTitre">Titre du livre</h2>
+        <p style="color:#2563eb; font-size:1.25rem; font-weight:700; margin:8px 0;" id="modalPrix">0 FCFA</p>
       </div>
 
       <!-- ÉTAPE 1 : PAYER -->
       <div id="etape1">
-        <div style="background:#fef9c3; border:1px solid #f59e0b; border-radius:10px; padding:16px 18px; margin-bottom:20px;">
-          <p style="font-weight:700; color:#92400e; margin-bottom:8px;">📋 Comment commander :</p>
-          <p style="font-size:0.9rem; color:#374151; margin-bottom:6px;">1️⃣ Envoyez le paiement par <strong>Moov Money ou Celtis</strong></p>
-          <p style="font-size:0.9rem; color:#374151; margin-bottom:6px;">2️⃣ Numéro Moov : <strong>+229 01 58528627</strong></p>
-          <p style="font-size:0.9rem; color:#374151; margin-bottom:6px;">3️⃣ Numéro Celtis : <strong>+229 01 48212840</strong></p>
-          <p style="font-size:0.9rem; color:#374151;">4️⃣ Envoyez la <strong>capture de paiement</strong> sur WhatsApp → vous recevrez votre <strong>code d'accès</strong></p>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:16px 18px; margin-bottom:20px;">
+          <p style="font-weight:600; color:#0f172a; margin-bottom:8px;">Comment commander</p>
+          <p style="font-size:0.9rem; color:#475569; margin-bottom:6px;">1. Envoyez le paiement par <strong>Moov Money ou Celtis</strong></p>
+          <p style="font-size:0.9rem; color:#475569; margin-bottom:6px;">2. Numéro Moov : <strong>+229 01 58528627</strong></p>
+          <p style="font-size:0.9rem; color:#475569; margin-bottom:6px;">3. Numéro Celtis : <strong>+229 01 48212840</strong></p>
+          <p style="font-size:0.9rem; color:#475569;">4. Envoyez la <strong>capture de paiement</strong> sur WhatsApp — vous recevrez votre <strong>code d'accès</strong></p>
         </div>
-        <a id="btnWhatsApp" href="#" target="_blank" style="display:block; background:#25d366; color:#fff; text-align:center; padding:14px; border-radius:10px; font-weight:700; font-size:1rem; margin-bottom:16px; text-decoration:none;">
-          📱 Envoyer la preuve de paiement sur WhatsApp
+        <a id="btnWhatsApp" href="#" target="_blank" style="display:block; background:#128c7e; color:#fff; text-align:center; padding:14px; border-radius:8px; font-weight:600; font-size:0.95rem; margin-bottom:12px; text-decoration:none;">
+          Envoyer la preuve de paiement sur WhatsApp
         </a>
-        <button onclick="afficherEtape2()" style="display:block; width:100%; background:#f3f4f6; color:#374151; padding:12px; border-radius:10px; font-weight:600; border:none; cursor:pointer; font-size:0.9rem;">
+        <button onclick="afficherEtape2()" style="display:block; width:100%; background:#f8fafc; color:#475569; padding:12px; border-radius:8px; font-weight:500; border:1px solid #e2e8f0; cursor:pointer; font-size:0.9rem; font-family:inherit;">
           J'ai déjà reçu mon code d'accès →
         </button>
       </div>
 
       <!-- ÉTAPE 2 : ENTRER LE CODE -->
       <div id="etape2" style="display:none;">
-        <p style="color:#57606a; font-size:0.9rem; margin-bottom:16px; text-align:center;">Entrez le code reçu sur WhatsApp après paiement :</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-bottom:16px; text-align:center;">Entrez le code reçu sur WhatsApp après paiement :</p>
         <input id="codeInput" type="text" placeholder="Votre code (ex: EB-IA-1126)" maxlength="20"
-          style="width:100%; padding:14px 16px; border:2px solid #e5e7eb; border-radius:10px; font-size:1rem; text-align:center; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px; outline:none;"
+          style="width:100%; padding:14px 16px; border:1px solid #e2e8f0; border-radius:8px; font-size:1rem; text-align:center; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px; outline:none; font-family:inherit;"
           oninput="this.value=this.value.toUpperCase()"
         />
-        <p id="codeErreur" style="color:#dc2626; font-size:0.85rem; text-align:center; margin-bottom:12px; display:none;">❌ Code invalide ou incorrect. Vérifiez et réessayez.</p>
-        <button onclick="verifierCode()" style="width:100%; background:#4f46e5; color:#fff; padding:14px; border-radius:10px; font-weight:700; border:none; cursor:pointer; font-size:1rem;">
-          🔓 Accéder à mon e-book
+        <p id="codeErreur" style="color:#dc2626; font-size:0.85rem; text-align:center; margin-bottom:12px; display:none;">Code invalide ou incorrect. Vérifiez et réessayez.</p>
+        <button onclick="verifierCode()" style="width:100%; background:#0f172a; color:#fff; padding:14px; border-radius:8px; font-weight:600; border:none; cursor:pointer; font-size:0.95rem; font-family:inherit;">
+          Accéder à mon e-book
         </button>
-        <button onclick="afficherEtape1()" style="display:block; width:100%; background:none; color:#9ca3af; padding:10px; border:none; cursor:pointer; font-size:0.85rem; margin-top:8px;">
+        <button onclick="afficherEtape1()" style="display:block; width:100%; background:none; color:#94a3b8; padding:10px; border:none; cursor:pointer; font-size:0.85rem; margin-top:8px; font-family:inherit;">
           ← Retour
         </button>
       </div>
@@ -579,15 +581,14 @@
   </div>
 
   <!-- ===== MODALE SUCCÈS ===== -->
-  <div id="modalSucces" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:400; align-items:center; justify-content:center; padding:20px;">
-    <div style="background:#fff; border-radius:20px; padding:40px 32px; max-width:440px; width:100%; text-align:center;">
-      <div style="font-size:3rem; margin-bottom:12px;">🎉</div>
-      <h2 style="color:#059669; margin-bottom:8px;">Paiement vérifié !</h2>
-      <p style="color:#57606a; margin-bottom:28px;">Votre accès est confirmé. Cliquez pour lire votre e-book maintenant.</p>
-      <a id="lienLivre" href="#" target="_blank" style="display:block; background:#4f46e5; color:#fff; padding:14px 24px; border-radius:10px; font-weight:700; font-size:1rem; text-decoration:none; margin-bottom:12px;">
-        📖 Lire mon e-book maintenant
+  <div id="modalSucces" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.55); z-index:400; align-items:center; justify-content:center; padding:20px;">
+    <div style="background:#fff; border-radius:10px; padding:36px 28px; max-width:440px; width:100%; text-align:center; border:1px solid #e2e8f0;">
+      <h2 style="color:#0f172a; margin-bottom:8px; font-size:1.25rem;">Paiement vérifié</h2>
+      <p style="color:#64748b; margin-bottom:28px;">Votre accès est confirmé. Cliquez pour ouvrir votre e-book.</p>
+      <a id="lienLivre" href="#" target="_blank" style="display:block; background:#0f172a; color:#fff; padding:14px 24px; border-radius:8px; font-weight:600; font-size:0.95rem; text-decoration:none; margin-bottom:12px;">
+        Lire mon e-book
       </a>
-      <button onclick="fermerSucces()" style="background:none; border:none; color:#9ca3af; cursor:pointer; font-size:0.9rem;">Fermer</button>
+      <button onclick="fermerSucces()" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-size:0.9rem; font-family:inherit;">Fermer</button>
     </div>
   </div>
 
@@ -632,7 +633,7 @@
 
     function commanderLivre(titre, prix, fichier) {
       livreCourant = fichier;
-      document.getElementById('modalTitre').textContent = '📚 ' + titre;
+      document.getElementById('modalTitre').textContent = titre;
       document.getElementById('modalPrix').textContent = prix;
       const msg = encodeURIComponent('Bonjour ! Je veux commander : *' + titre + '* (' + prix + '). Voici ma preuve de paiement :');
       document.getElementById('btnWhatsApp').href = 'https://wa.me/22901585286?text=' + msg;
@@ -662,7 +663,7 @@
       const erreur = document.getElementById('codeErreur');
 
       if (!code) {
-        erreur.textContent = '⚠️ Veuillez entrer votre code d\'accès.';
+        erreur.textContent = 'Veuillez entrer votre code d\'accès.';
         erreur.style.display = 'block';
         return;
       }
@@ -675,15 +676,15 @@
         lien.href = 'books/' + livreCourant + '.html';
         document.getElementById('modalSucces').style.display = 'flex';
       } else if (codesAcces[code] && codesAcces[code] !== livreCourant) {
-        erreur.textContent = '❌ Ce code est pour un autre e-book. Vérifiez le code reçu.';
+        erreur.textContent = 'Ce code est pour un autre e-book. Vérifiez le code reçu.';
         erreur.style.display = 'block';
       } else {
-        erreur.textContent = '❌ Code invalide. Vérifiez le code reçu sur WhatsApp.';
+        erreur.textContent = 'Code invalide. Vérifiez le code reçu sur WhatsApp.';
         erreur.style.display = 'block';
         // Faire trembler le champ
         const input = document.getElementById('codeInput');
         input.style.borderColor = '#dc2626';
-        setTimeout(() => input.style.borderColor = '#e5e7eb', 2000);
+        setTimeout(() => input.style.borderColor = '#e2e8f0', 2000);
       }
     }
 
