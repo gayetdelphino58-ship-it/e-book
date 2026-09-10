@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Introduction à la Géomatique et aux SIG</title>
+<style>
+  @media print{.no-print{display:none;}}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',Arial,sans-serif;font-size:15px;line-height:1.8;color:#1a1a2e;background:#fff;}
+  .cover{background:linear-gradient(135deg,#052e16 0%,#166534 50%,#0891b2 100%);color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 40px;page-break-after:always;}
+  .cover h1{font-size:2.8rem;font-weight:900;margin-bottom:20px;}
+  .cover .subtitle{font-size:1.1rem;color:#a7f3d0;max-width:520px;margin:0 auto 40px;}
+  .cover-icon{font-size:5rem;margin-bottom:24px;}
+  .cover-badge{background:rgba(255,255,255,0.15);padding:8px 24px;border-radius:20px;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:32px;}
+  .cover-contact{margin-top:48px;background:rgba(0,0,0,0.2);padding:20px 36px;border-radius:12px;}
+  .cover-contact p{margin:4px 0;color:#a7f3d0;font-size:0.9rem;}
+  .page{max-width:800px;margin:0 auto;padding:60px 48px;}
+  .toc{background:#ecfdf5;border-left:4px solid #059669;padding:32px 40px;border-radius:0 12px 12px 0;margin:40px 0;page-break-after:always;}
+  .toc h2{color:#166534;margin-bottom:20px;}
+  .toc ol{padding-left:20px;}
+  .toc li{padding:6px 0;color:#374151;}
+  .toc li span{color:#166534;font-weight:600;}
+  .chapter{page-break-before:always;margin-bottom:60px;}
+  .chapter-num{color:#166534;font-size:0.85rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+  .chapter h2{font-size:1.9rem;font-weight:800;color:#1a1a2e;margin-bottom:24px;border-bottom:3px solid #059669;padding-bottom:12px;}
+  .chapter h3{font-size:1.15rem;font-weight:700;color:#166534;margin:28px 0 10px;}
+  .chapter p{margin-bottom:16px;color:#374151;}
+  .retenir{background:#ecfdf5;border-left:4px solid #059669;padding:20px 24px;border-radius:0 10px 10px 0;margin:24px 0;}
+  .retenir strong{color:#166534;display:block;margin-bottom:8px;font-size:0.9rem;text-transform:uppercase;}
+  ul.liste{margin:12px 0 20px 20px;}
+  ul.liste li{padding:5px 0;color:#374151;}
+  ul.liste li::marker{color:#059669;}
+  .def-box{background:#f0fdfa;border:1px solid #99f6e4;border-radius:10px;padding:16px 20px;margin:14px 0;}
+  .def-box strong{color:#0f766e;}
+  .schema{background:#0f172a;color:#a7f3d0;padding:20px 24px;border-radius:10px;font-family:'Courier New',monospace;font-size:0.85rem;margin:16px 0;line-height:1.8;}
+  .app-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:20px 0;}
+  .app-card{background:#ecfdf5;border:1px solid #6ee7b7;border-radius:10px;padding:16px;}
+  .app-card h4{color:#166534;margin-bottom:6px;font-size:0.95rem;}
+  .app-card p{font-size:0.85rem;color:#374151;margin:0;}
+  .back-cover{background:linear-gradient(135deg,#166534,#052e16);color:#fff;padding:60px 48px;text-align:center;margin-top:60px;border-radius:16px;}
+  .contact-box{background:rgba(255,255,255,0.15);padding:24px 36px;border-radius:12px;display:inline-block;margin-top:16px;}
+  .contact-box p{color:#a7f3d0;margin:6px 0;}
+  .btn-print{position:fixed;bottom:24px;right:24px;background:#166534;color:#fff;padding:12px 24px;border-radius:30px;font-weight:700;border:none;cursor:pointer;}
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="cover-badge">🗺️ Sciences Géographiques</div>
+  <div class="cover-icon">🗺️</div>
+  <h1>Introduction à la Géomatique et aux SIG</h1>
+  <p class="subtitle">Systèmes d'Information Géographique, télédétection et cartographie — Guide complet pour débutants</p>
+  <div class="cover-contact">
+    <p><strong>📚 EbookShop — Votre librairie numérique</strong></p>
+    <p>📱 Moov : +229 01 58528627 &nbsp;|&nbsp; 📱 Celtis : +229 01 48212840</p>
+  </div>
+</div>
+<div class="page">
+<div class="toc">
+  <h2>📋 Table des Matières</h2>
+  <ol>
+    <li><span>Ch. 1</span> — Qu'est-ce que la Géomatique ?</li>
+    <li><span>Ch. 2</span> — Histoire de la cartographie</li>
+    <li><span>Ch. 3</span> — Les Systèmes d'Information Géographique (SIG)</li>
+    <li><span>Ch. 4</span> — Types de données géographiques</li>
+    <li><span>Ch. 5</span> — Télédétection et imagerie satellite</li>
+    <li><span>Ch. 6</span> — GPS et systèmes de positionnement</li>
+    <li><span>Ch. 7</span> — Applications en Afrique</li>
+    <li><span>Ch. 8</span> — Logiciels et carrières en Géomatique</li>
+  </ol>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 1</div>
+  <h2>Qu'est-ce que la Géomatique ?</h2>
+  <p>La géomatique est une discipline scientifique qui regroupe l'ensemble des outils et méthodes permettant de collecter, traiter, analyser, représenter et diffuser des données à référence spatiale (géographiques). En d'autres termes, c'est la science de la gestion de l'information géographique.</p>
+  <div class="def-box">
+    <strong>📖 Définition officielle</strong>
+    <p>La géomatique = GÉOgraphie + inforMATIQUE. Elle combine les sciences de la Terre, l'informatique, les mathématiques et les statistiques pour créer, gérer et analyser des informations géoréférencées.</p>
+  </div>
+  <h3>Les composantes de la géomatique</h3>
+  <ul class="liste">
+    <li>🗺️ <strong>Cartographie :</strong> Création et lecture de cartes géographiques.</li>
+    <li>🛰️ <strong>Télédétection :</strong> Acquisition d'informations à distance via satellites ou drones.</li>
+    <li>📡 <strong>GPS / GNSS :</strong> Systèmes de positionnement par satellites.</li>
+    <li>💻 <strong>SIG :</strong> Systèmes d'Information Géographique — logiciels d'analyse spatiale.</li>
+    <li>📐 <strong>Topographie :</strong> Mesure et représentation du terrain.</li>
+    <li>🔢 <strong>Géodésie :</strong> Mesure et modélisation de la forme de la Terre.</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Quand vous utilisez Google Maps, vous utilisez de la géomatique ! La navigation GPS, les images satellites de Google Earth, les cartes OpenStreetMap — tout ça est de la géomatique appliquée.</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 2</div>
+  <h2>Histoire de la Cartographie</h2>
+  <p>L'homme cartographie son espace depuis des millénaires. Les premières cartes remontent à la Babylonie antique (2300 av. J.-C.), gravées sur des tablettes d'argile.</p>
+  <h3>Grandes étapes de l'histoire cartographique</h3>
+  <ul class="liste">
+    <li><strong>Antiquité :</strong> Eratosthène calcule la circonférence de la Terre (250 av. J.-C.) avec une précision remarquable.</li>
+    <li><strong>Moyen Âge :</strong> Les Arabes perfectionne la cartographie — Al-Idrisi crée une carte du monde en 1154.</li>
+    <li><strong>Grandes Explorations (XV-XVIe s.) :</strong> Mercator invente sa projection célèbre en 1569.</li>
+    <li><strong>XIX-XXe s. :</strong> Triangulation, photogrammétrie aérienne, cartes topographiques nationales.</li>
+    <li><strong>1972 :</strong> Lancement de Landsat 1 — première série de satellites d'observation de la Terre.</li>
+    <li><strong>1994 :</strong> GPS civil rendu accessible au public.</li>
+    <li><strong>2001 :</strong> Lancement de Google Earth (2005 grand public) — révolution de la géomatique.</li>
+    <li><strong>2025 :</strong> IA + géomatique, jumeaux numériques de villes, cartographie en temps réel par drones.</li>
+  </ul>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 3</div>
+  <h2>Les Systèmes d'Information Géographique (SIG)</h2>
+  <p>Un SIG est un système informatique permettant de collecter, stocker, analyser et représenter des données géographiques. C'est l'outil central de la géomatique moderne.</p>
+  <h3>Architecture d'un SIG</h3>
+  <div class="schema">Un SIG est composé de 5 éléments :
+
+1. DONNÉES    → Cartes, tables, coordonnées GPS
+2. MATÉRIEL   → Ordinateur, GPS, scanner, imprimante
+3. LOGICIEL   → QGIS, ArcGIS, MapInfo
+4. MÉTHODES   → Procédures d'analyse spatiale
+5. PERSONNES  → Géomaticiens, utilisateurs</div>
+  <h3>Que peut faire un SIG ?</h3>
+  <ul class="liste">
+    <li>📌 Localiser des objets dans l'espace (bâtiments, routes, rivières)</li>
+    <li>📊 Analyser des distributions spatiales (où sont les zones à risque inondation ?)</li>
+    <li>🔗 Croiser des données (population + accès aux soins = zones prioritaires)</li>
+    <li>🗺️ Créer des cartes thématiques professionnelles</li>
+    <li>📈 Modéliser et prédire des phénomènes spatiaux</li>
+    <li>🚗 Calculer des itinéraires optimaux (routage)</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Environ 80% des décisions des gouvernements et entreprises ont une dimension spatiale. Les SIG sont utilisés dans l'urbanisme, l'agriculture, la santé publique, la gestion des catastrophes, le pétrole et gaz, etc.</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 4</div>
+  <h2>Types de Données Géographiques</h2>
+  <h3>Données vectorielles</h3>
+  <p>Les données vectorielles représentent les objets géographiques par des formes géométriques :</p>
+  <ul class="liste">
+    <li>📍 <strong>Points :</strong> Villes, puits, arbres, stations météo.</li>
+    <li>〰️ <strong>Lignes :</strong> Routes, rivières, réseaux électriques, pipelines.</li>
+    <li>⬡ <strong>Polygones :</strong> Parcelles, pays, lacs, zones administratives.</li>
+  </ul>
+  <h3>Données matricielles (Raster)</h3>
+  <p>Les données raster représentent l'espace par une grille de cellules (pixels). Chaque pixel a une valeur (altitude, température, réflectance). Les images satellites et MNT (Modèles Numériques de Terrain) sont des rasters.</p>
+  <div class="schema">Vecteur vs Raster :
+
+VECTEUR : Précis, léger, adapté aux objets discrets
+  Route = ensemble de points coordonnés reliés
+  
+RASTER : Image continue, adapté aux phénomènes continus
+  Image satellite = grille de pixels de 30m × 30m</div>
+  <h3>Systèmes de projection et de coordonnées</h3>
+  <ul class="liste">
+    <li><strong>WGS84 :</strong> Système mondial utilisé par le GPS. Coordonnées en latitude/longitude.</li>
+    <li><strong>UTM :</strong> Universal Transverse Mercator. Coordonnées en mètres. Le Bénin est en Zone UTM 31N.</li>
+    <li><strong>Projection de Mercator :</strong> Utilisée par Google Maps. Distorque les pôles.</li>
+  </ul>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 5</div>
+  <h2>Télédétection et Imagerie Satellite</h2>
+  <p>La télédétection est l'acquisition d'informations sur la surface terrestre sans contact direct, principalement depuis des satellites ou des avions. C'est le "regard de l'espace sur la Terre".</p>
+  <h3>Principaux satellites d'observation</h3>
+  <ul class="liste">
+    <li>🛰️ <strong>Landsat (NASA/USGS) :</strong> Gratuit, archives depuis 1972. Résolution 30m. Idéal pour étudier les changements d'occupation du sol.</li>
+    <li>🛰️ <strong>Sentinel (ESA/Europe) :</strong> Gratuit, résolution 10m. Très utilisé en Afrique pour l'agriculture.</li>
+    <li>🛰️ <strong>SPOT (France) :</strong> Résolution 1.5m. Payant mais très précis.</li>
+    <li>🛰️ <strong>Planet Labs :</strong> Constellation de 200+ satellites, images journalières à 3m de résolution.</li>
+  </ul>
+  <h3>Applications de la télédétection en Afrique</h3>
+  <ul class="liste">
+    <li>🌾 Suivi des cultures agricoles et détection des sécheresses</li>
+    <li>🌳 Cartographie de la déforestation et de la désertification</li>
+    <li>🌊 Surveillance des inondations et gestion des risques</li>
+    <li>🏙️ Suivi de l'étalement urbain (Cotonou, Lagos, Abidjan)</li>
+    <li>🛢️ Exploration minière et pétrolière</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Google Earth Engine est une plateforme gratuite qui donne accès à des pétaoctets d'images satellites et permet de les analyser directement en ligne, sans télécharger les données. Révolutionnaire pour la recherche africaine.</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 6</div>
+  <h2>GPS et Systèmes de Positionnement</h2>
+  <p>Le GPS (Global Positioning System) est le système américain de navigation par satellite. Il permet de déterminer la position de n'importe quel point sur Terre avec une précision de quelques mètres.</p>
+  <h3>Comment fonctionne le GPS ?</h3>
+  <div class="schema">Le GPS utilise la TRILATÉRATION :
+
+  [Satellite 1] ──distance 1──┐
+  [Satellite 2] ──distance 2──┼── POSITION CALCULÉE
+  [Satellite 3] ──distance 3──┘
+  [Satellite 4] ──distance 4──  (pour l'altitude)
+
+Minimum 4 satellites nécessaires pour un fix 3D précis</div>
+  <h3>Les différents GNSS</h3>
+  <ul class="liste">
+    <li>🇺🇸 <strong>GPS (USA) :</strong> Le plus connu, 31 satellites en orbite.</li>
+    <li>🇷🇺 <strong>GLONASS (Russie) :</strong> Alternative russe, 24 satellites.</li>
+    <li>🇪🇺 <strong>Galileo (Europe) :</strong> Précision civile de 1m, en déploiement.</li>
+    <li>🇨🇳 <strong>BeiDou (Chine) :</strong> 35+ satellites, couverture mondiale depuis 2020.</li>
+  </ul>
+  <p>Les smartphones modernes utilisent simultanément plusieurs constellations pour plus de précision. La plupart combinent GPS + GLONASS + Galileo.</p>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 7</div>
+  <h2>Applications de la Géomatique en Afrique</h2>
+  <div class="app-grid">
+    <div class="app-card"><h4>🌾 Agriculture de Précision</h4><p>Cartographier les parcelles, analyser l'état des cultures par satellite, optimiser l'irrigation et les intrants.</p></div>
+    <div class="app-card"><h4>🏙️ Urbanisme et Aménagement</h4><p>Planifier l'expansion des villes, gérer le cadastre, identifier les zones à risque.</p></div>
+    <div class="app-card"><h4>💧 Gestion de l'Eau</h4><p>Localiser les nappes phréatiques, gérer les bassins versants, prévenir les inondations.</p></div>
+    <div class="app-card"><h4>🏥 Santé Publique</h4><p>Cartographier les épidémies, analyser l'accessibilité aux centres de santé.</p></div>
+    <div class="app-card"><h4>⚡ Énergie</h4><p>Identifier les zones optimales pour les panneaux solaires et éoliennes.</p></div>
+    <div class="app-card"><h4>🛣️ Infrastructures</h4><p>Planifier les routes, réseaux électriques et de fibre optique.</p></div>
+  </div>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Au Bénin, l'IGN-Bénin (Institut Géographique National) et l'ANCB (Association Nationale des Communes) utilisent des SIG pour la gestion du territoire. Des opportunités d'emploi et de consultance existent dans ces structures.</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 8</div>
+  <h2>Logiciels et Carrières en Géomatique</h2>
+  <h3>Les logiciels incontournables</h3>
+  <ul class="liste">
+    <li>🆓 <strong>QGIS :</strong> Le plus populaire, open source, gratuit. Équivalent libre d'ArcGIS. Téléchargeable sur qgis.org.</li>
+    <li>💰 <strong>ArcGIS (ESRI) :</strong> Standard industriel mondial. Payant mais très puissant. Version étudiant disponible.</li>
+    <li>🆓 <strong>Google Earth Engine :</strong> Analyse d'images satellites en ligne, gratuit pour la recherche.</li>
+    <li>🆓 <strong>GRASS GIS :</strong> Traitement raster et vectoriel avancé. Gratuit.</li>
+    <li>📱 <strong>ODK Collect / KoboToolbox :</strong> Collecte de données terrain sur smartphone.</li>
+  </ul>
+  <h3>Débouchés professionnels</h3>
+  <ul class="liste">
+    <li>🏛️ Administrations publiques (urbanisme, cadastre, environnement)</li>
+    <li>🌍 ONG et organisations internationales (PNUD, FAO, UNICEF)</li>
+    <li>⛏️ Industries extractives (mines, pétrole)</li>
+    <li>🌾 Projets agricoles et développement rural</li>
+    <li>📱 Startups de géolocalisation et cartographie</li>
+    <li>🎓 Enseignement et recherche universitaire</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Un géomaticien expérimenté peut travailler à distance pour des organisations internationales (USAID, Banque Mondiale, Union Européenne) depuis le Bénin et gagner 2 000 à 5 000 $/mois.</p>
+  </div>
+</div>
+
+<div class="back-cover">
+  <h2>🗺️ La Terre n'attend que votre regard !</h2>
+  <p>La géomatique offre des opportunités immenses pour contribuer au développement de l'Afrique.</p>
+  <div class="contact-box">
+    <p>📱 <strong>Moov :</strong> +229 01 58528627</p>
+    <p>📱 <strong>Celtis :</strong> +229 01 48212840</p>
+    <p>🌐 <strong>EbookShop</strong> — Votre librairie numérique</p>
+  </div>
+</div>
+</div>
+<button class="btn-print no-print" onclick="window.print()">🖨️ Sauvegarder en PDF</button>
+</body>
+</html>

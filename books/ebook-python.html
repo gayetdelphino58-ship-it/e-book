@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Apprendre Python en 30 Jours</title>
+<style>
+  @media print { .no-print{display:none;} }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',Arial,sans-serif;font-size:15px;line-height:1.8;color:#1a1a2e;background:#fff;}
+  .cover{background:linear-gradient(135deg,#064e3b 0%,#065f46 50%,#f59e0b 100%);color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 40px;page-break-after:always;}
+  .cover-badge{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);padding:8px 24px;border-radius:20px;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:32px;}
+  .cover h1{font-size:3rem;font-weight:900;line-height:1.1;margin-bottom:20px;}
+  .cover .subtitle{font-size:1.2rem;color:#d1fae5;max-width:500px;margin:0 auto 40px;}
+  .cover-icon{font-size:5rem;margin-bottom:24px;}
+  .cover-contact{margin-top:48px;background:rgba(255,255,255,0.1);padding:20px 36px;border-radius:12px;font-size:0.9rem;}
+  .cover-contact p{margin:4px 0;color:#d1fae5;}
+  .page{max-width:800px;margin:0 auto;padding:60px 48px;}
+  .toc{background:#f0fdf4;border-left:4px solid #059669;padding:32px 40px;border-radius:0 12px 12px 0;margin:40px 0;page-break-after:always;}
+  .toc h2{color:#059669;margin-bottom:20px;font-size:1.4rem;}
+  .toc ol{padding-left:20px;}
+  .toc li{padding:6px 0;color:#374151;}
+  .toc li span{color:#059669;font-weight:600;}
+  .chapter{page-break-before:always;margin-bottom:60px;}
+  .chapter-num{color:#059669;font-size:0.85rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+  .chapter h2{font-size:1.9rem;font-weight:800;color:#1a1a2e;margin-bottom:24px;border-bottom:3px solid #059669;padding-bottom:12px;}
+  .chapter h3{font-size:1.15rem;font-weight:700;color:#059669;margin:28px 0 10px;}
+  .chapter p{margin-bottom:16px;color:#374151;}
+  .retenir{background:#f0fdf4;border-left:4px solid #059669;padding:20px 24px;border-radius:0 10px 10px 0;margin:24px 0;}
+  .retenir strong{color:#059669;display:block;margin-bottom:8px;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;}
+  .code-block{background:#0f172a;color:#a3e635;padding:24px;border-radius:12px;margin:20px 0;font-family:'Courier New',monospace;font-size:0.88rem;line-height:1.6;overflow-x:auto;}
+  .code-block .comment{color:#64748b;}
+  .code-block .string{color:#fbbf24;}
+  .code-block .keyword{color:#818cf8;}
+  ul.liste{margin:12px 0 20px 20px;}
+  ul.liste li{padding:5px 0;color:#374151;}
+  ul.liste li::marker{color:#059669;}
+  .day-box{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:16px 20px;margin:12px 0;}
+  .day-box strong{color:#059669;}
+  .back-cover{background:linear-gradient(135deg,#059669,#065f46);color:#fff;padding:60px 48px;text-align:center;margin-top:60px;border-radius:16px;}
+  .back-cover h2{font-size:1.8rem;margin-bottom:16px;}
+  .contact-box{background:rgba(255,255,255,0.15);padding:24px 36px;border-radius:12px;display:inline-block;margin-top:16px;}
+  .contact-box p{color:#fff;font-size:1rem;margin:6px 0;}
+  .btn-print{position:fixed;bottom:24px;right:24px;background:#059669;color:#fff;padding:12px 24px;border-radius:30px;font-weight:700;border:none;cursor:pointer;font-size:0.95rem;}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-badge">🐍 Édition 2025</div>
+  <div class="cover-icon">🐍</div>
+  <h1>Apprendre Python en 30 Jours</h1>
+  <p class="subtitle">Du zéro absolu au développeur opérationnel — Guide pratique avec exercices</p>
+  <div class="cover-contact">
+    <p><strong>📚 EbookShop — Votre librairie numérique</strong></p>
+    <p>📱 Moov : +229 01 58528627</p>
+    <p>📱 Celtis : +229 01 48212840</p>
+  </div>
+</div>
+
+<div class="page">
+<div class="toc">
+  <h2>📋 Table des Matières</h2>
+  <ol>
+    <li><span>Chapitre 1</span> — Pourquoi apprendre Python ?</li>
+    <li><span>Chapitre 2</span> — Installation et premier programme</li>
+    <li><span>Chapitre 3</span> — Variables, types et opérateurs</li>
+    <li><span>Chapitre 4</span> — Conditions et boucles</li>
+    <li><span>Chapitre 5</span> — Fonctions et modules</li>
+    <li><span>Chapitre 6</span> — Listes, dictionnaires et fichiers</li>
+    <li><span>Chapitre 7</span> — Introduction à la Programmation Orientée Objet</li>
+    <li><span>Chapitre 8</span> — Projets pratiques : calculatrice, jeu et automatisation</li>
+  </ol>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 1</div>
+  <h2>Pourquoi apprendre Python ?</h2>
+  <p>Python est aujourd'hui le langage de programmation le plus populaire au monde. Créé en 1991 par Guido van Rossum, il est devenu en 30 ans le couteau suisse des développeurs : simple à apprendre, puissant à utiliser, et présent dans tous les domaines.</p>
+  <h3>Python est utilisé pour...</h3>
+  <ul class="liste">
+    <li>🤖 <strong>Intelligence Artificielle & Machine Learning :</strong> TensorFlow, PyTorch, scikit-learn.</li>
+    <li>🌐 <strong>Développement Web :</strong> Django, Flask — Instagram et Pinterest l'utilisent.</li>
+    <li>📊 <strong>Analyse de données :</strong> Pandas, NumPy, Matplotlib.</li>
+    <li>🔒 <strong>Cybersécurité :</strong> Tests de pénétration, scripts d'audit.</li>
+    <li>🤖 <strong>Automatisation :</strong> Scripts pour automatiser les tâches répétitives.</li>
+    <li>🎮 <strong>Jeux vidéo :</strong> Pygame pour créer des jeux simples.</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Python est le langage numéro 1 pour l'IA, la data science et l'automatisation. En 2025, un développeur Python junior gagne en moyenne 800 000 à 2 000 000 FCFA/mois en freelance international.</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 2</div>
+  <h2>Installation et Premier Programme</h2>
+  <h3>Installer Python</h3>
+  <ul class="liste">
+    <li>Rendez-vous sur <strong>python.org</strong></li>
+    <li>Téléchargez la dernière version (Python 3.12+)</li>
+    <li>Lors de l'installation, cochez "Add Python to PATH"</li>
+    <li>Installez aussi <strong>VS Code</strong> (éditeur gratuit de Microsoft)</li>
+  </ul>
+  <h3>Votre premier programme</h3>
+  <p>La tradition en programmation est d'écrire un programme qui affiche "Bonjour le monde !". Voici comment faire en Python :</p>
+  <div class="code-block"><span class="comment"># Mon premier programme Python</span>
+<span class="keyword">print</span>(<span class="string">"Bonjour le monde !"</span>)
+<span class="keyword">print</span>(<span class="string">"Je commence Python aujourd'hui !"</span>)</div>
+  <p>Résultat dans le terminal :</p>
+  <div class="code-block">Bonjour le monde !
+Je commence Python aujourd'hui !</div>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>La fonction <strong>print()</strong> est la plus utilisée en Python. Elle affiche du texte dans la console. Les textes (chaînes de caractères) sont entourés de guillemets simples ou doubles.</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 3</div>
+  <h2>Variables, Types et Opérateurs</h2>
+  <p>Une variable est une boîte qui stocke une valeur. En Python, vous créez une variable simplement en lui donnant un nom et une valeur.</p>
+  <div class="code-block"><span class="comment"># Créer des variables</span>
+nom = <span class="string">"Alice"</span>
+age = 25
+prix = 9.99
+est_actif = <span class="keyword">True</span>
+
+<span class="keyword">print</span>(nom)    <span class="comment"># Affiche : Alice</span>
+<span class="keyword">print</span>(age)    <span class="comment"># Affiche : 25</span>
+<span class="keyword">print</span>(prix)   <span class="comment"># Affiche : 9.99</span></div>
+  <h3>Les types de données principaux</h3>
+  <ul class="liste">
+    <li><strong>str :</strong> Chaîne de texte — "Bonjour", 'Python'</li>
+    <li><strong>int :</strong> Nombre entier — 42, -10, 0</li>
+    <li><strong>float :</strong> Nombre décimal — 3.14, 9.99</li>
+    <li><strong>bool :</strong> Vrai ou Faux — True, False</li>
+    <li><strong>list :</strong> Liste de valeurs — [1, 2, 3, "pomme"]</li>
+  </ul>
+  <h3>Opérateurs mathématiques</h3>
+  <div class="code-block">a = 10
+b = 3
+<span class="keyword">print</span>(a + b)   <span class="comment"># Addition : 13</span>
+<span class="keyword">print</span>(a - b)   <span class="comment"># Soustraction : 7</span>
+<span class="keyword">print</span>(a * b)   <span class="comment"># Multiplication : 30</span>
+<span class="keyword">print</span>(a / b)   <span class="comment"># Division : 3.333...</span>
+<span class="keyword">print</span>(a ** b)  <span class="comment"># Puissance : 1000</span>
+<span class="keyword">print</span>(a % b)   <span class="comment"># Modulo (reste) : 1</span></div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 4</div>
+  <h2>Conditions et Boucles</h2>
+  <h3>Les conditions (if/elif/else)</h3>
+  <p>Les conditions permettent d'exécuter du code différent selon une situation.</p>
+  <div class="code-block">age = 18
+<span class="keyword">if</span> age >= 18:
+    <span class="keyword">print</span>(<span class="string">"Vous êtes majeur !"</span>)
+<span class="keyword">elif</span> age >= 13:
+    <span class="keyword">print</span>(<span class="string">"Vous êtes adolescent."</span>)
+<span class="keyword">else</span>:
+    <span class="keyword">print</span>(<span class="string">"Vous êtes enfant."</span>)</div>
+  <h3>La boucle for</h3>
+  <div class="code-block"><span class="comment"># Afficher les nombres de 1 à 5</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> range(1, 6):
+    <span class="keyword">print</span>(i)
+
+<span class="comment"># Parcourir une liste</span>
+fruits = [<span class="string">"mangue"</span>, <span class="string">"papaye"</span>, <span class="string">"ananas"</span>]
+<span class="keyword">for</span> fruit <span class="keyword">in</span> fruits:
+    <span class="keyword">print</span>(<span class="string">"J'aime la"</span>, fruit)</div>
+  <h3>La boucle while</h3>
+  <div class="code-block">compteur = 0
+<span class="keyword">while</span> compteur < 5:
+    <span class="keyword">print</span>(<span class="string">"Compteur :"</span>, compteur)
+    compteur += 1  <span class="comment"># Équivaut à compteur = compteur + 1</span></div>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>En Python, l'indentation (espaces en début de ligne) est obligatoire. Elle remplace les accolades {} d'autres langages. Utilisez toujours 4 espaces ou une tabulation.</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 5</div>
+  <h2>Fonctions et Modules</h2>
+  <p>Une fonction est un bloc de code réutilisable. Au lieu de répéter le même code 10 fois, vous créez une fonction et l'appelez quand vous en avez besoin.</p>
+  <div class="code-block"><span class="comment"># Créer une fonction</span>
+<span class="keyword">def</span> saluer(nom):
+    <span class="keyword">print</span>(<span class="string">f"Bonjour, {nom} ! Bienvenue."</span>)
+
+<span class="comment"># Appeler la fonction</span>
+saluer(<span class="string">"Jean"</span>)   <span class="comment"># Affiche : Bonjour, Jean ! Bienvenue.</span>
+saluer(<span class="string">"Marie"</span>)  <span class="comment"># Affiche : Bonjour, Marie ! Bienvenue.</span>
+
+<span class="comment"># Fonction avec valeur de retour</span>
+<span class="keyword">def</span> calculer_tva(prix):
+    <span class="keyword">return</span> prix * 1.18
+
+total = calculer_tva(1000)
+<span class="keyword">print</span>(<span class="string">f"Prix TTC : {total} FCFA"</span>)  <span class="comment"># 1180 FCFA</span></div>
+  <h3>Les modules Python</h3>
+  <p>Python possède des milliers de modules (bibliothèques) prêts à l'emploi :</p>
+  <div class="code-block"><span class="keyword">import</span> math
+<span class="keyword">import</span> random
+<span class="keyword">import</span> datetime
+
+<span class="keyword">print</span>(math.sqrt(16))      <span class="comment"># Racine carrée : 4.0</span>
+<span class="keyword">print</span>(random.randint(1,6)) <span class="comment"># Dé aléatoire : 1-6</span>
+<span class="keyword">print</span>(datetime.date.today()) <span class="comment"># Date du jour</span></div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 6</div>
+  <h2>Listes, Dictionnaires et Fichiers</h2>
+  <h3>Les listes</h3>
+  <div class="code-block">courses = [<span class="string">"riz"</span>, <span class="string">"tomates"</span>, <span class="string">"huile"</span>]
+courses.append(<span class="string">"sel"</span>)    <span class="comment"># Ajouter</span>
+courses.remove(<span class="string">"riz"</span>)    <span class="comment"># Supprimer</span>
+<span class="keyword">print</span>(len(courses))       <span class="comment"># Nombre d'éléments : 3</span>
+<span class="keyword">print</span>(courses[0])         <span class="comment"># Premier élément : tomates</span></div>
+  <h3>Les dictionnaires</h3>
+  <div class="code-block">personne = {
+    <span class="string">"nom"</span>: <span class="string">"Kouassi"</span>,
+    <span class="string">"age"</span>: 28,
+    <span class="string">"ville"</span>: <span class="string">"Cotonou"</span>
+}
+<span class="keyword">print</span>(personne[<span class="string">"nom"</span>])    <span class="comment"># Kouassi</span>
+personne[<span class="string">"age"</span>] = 29    <span class="comment"># Modifier une valeur</span></div>
+  <h3>Lire et écrire des fichiers</h3>
+  <div class="code-block"><span class="comment"># Écrire dans un fichier</span>
+<span class="keyword">with</span> open(<span class="string">"notes.txt"</span>, <span class="string">"w"</span>) <span class="keyword">as</span> f:
+    f.write(<span class="string">"Mes notes Python\n"</span>)
+    f.write(<span class="string">"Chapitre 6 terminé !\n"</span>)
+
+<span class="comment"># Lire un fichier</span>
+<span class="keyword">with</span> open(<span class="string">"notes.txt"</span>, <span class="string">"r"</span>) <span class="keyword">as</span> f:
+    contenu = f.read()
+    <span class="keyword">print</span>(contenu)</div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 7</div>
+  <h2>Introduction à la Programmation Orientée Objet</h2>
+  <p>La Programmation Orientée Objet (POO) permet d'organiser le code en "objets" qui combinent données et comportements.</p>
+  <div class="code-block"><span class="comment"># Créer une classe</span>
+<span class="keyword">class</span> Voiture:
+    <span class="keyword">def</span> __init__(self, marque, couleur):
+        self.marque = marque
+        self.couleur = couleur
+        self.vitesse = 0
+
+    <span class="keyword">def</span> accelerer(self, valeur):
+        self.vitesse += valeur
+        <span class="keyword">print</span>(<span class="string">f"{self.marque} accélère à {self.vitesse} km/h"</span>)
+
+<span class="comment"># Créer des objets</span>
+ma_voiture = Voiture(<span class="string">"Toyota"</span>, <span class="string">"rouge"</span>)
+ma_voiture.accelerer(50)   <span class="comment"># Toyota accélère à 50 km/h</span>
+ma_voiture.accelerer(30)   <span class="comment"># Toyota accélère à 80 km/h</span></div>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>La POO est essentielle pour les grands projets. Elle permet de créer du code réutilisable, maintenable et organisé. Tous les frameworks Python modernes (Django, FastAPI) utilisent la POO.</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 8</div>
+  <h2>Projets Pratiques</h2>
+  <h3>Projet 1 : Calculatrice</h3>
+  <div class="code-block"><span class="keyword">def</span> calculatrice():
+    <span class="keyword">print</span>(<span class="string">"=== Calculatrice Python ==="</span>)
+    a = float(input(<span class="string">"Premier nombre : "</span>))
+    op = input(<span class="string">"Opération (+, -, *, /) : "</span>)
+    b = float(input(<span class="string">"Deuxième nombre : "</span>))
+    
+    <span class="keyword">if</span> op == <span class="string">"+"</span>: <span class="keyword">print</span>(<span class="string">f"Résultat : {a + b}"</span>)
+    <span class="keyword">elif</span> op == <span class="string">"-"</span>: <span class="keyword">print</span>(<span class="string">f"Résultat : {a - b}"</span>)
+    <span class="keyword">elif</span> op == <span class="string">"*"</span>: <span class="keyword">print</span>(<span class="string">f"Résultat : {a * b}"</span>)
+    <span class="keyword">elif</span> op == <span class="string">"/"</span> <span class="keyword">and</span> b != 0: <span class="keyword">print</span>(<span class="string">f"Résultat : {a / b}"</span>)
+
+calculatrice()</div>
+  <h3>Projet 2 : Jeu Devinez le Nombre</h3>
+  <div class="code-block"><span class="keyword">import</span> random
+secret = random.randint(1, 100)
+tentatives = 0
+
+<span class="keyword">while</span> <span class="keyword">True</span>:
+    guess = int(input(<span class="string">"Devinez (1-100) : "</span>))
+    tentatives += 1
+    <span class="keyword">if</span> guess < secret: <span class="keyword">print</span>(<span class="string">"Trop petit !"</span>)
+    <span class="keyword">elif</span> guess > secret: <span class="keyword">print</span>(<span class="string">"Trop grand !"</span>)
+    <span class="keyword">else</span>:
+        <span class="keyword">print</span>(<span class="string">f"Bravo ! Trouvé en {tentatives} tentatives !"</span>)
+        <span class="keyword">break</span></div>
+  <div class="day-box">
+    <strong>🗓️ Plan sur 30 jours :</strong><br>
+    Jours 1-5 : Bases (variables, conditions, boucles) | Jours 6-10 : Fonctions et modules | Jours 11-15 : Listes et dictionnaires | Jours 16-20 : POO | Jours 21-25 : Projet calculatrice + jeu | Jours 26-30 : Mini-projet final (votre idée !)
+  </div>
+</div>
+
+<div class="back-cover">
+  <h2>🐍 Félicitations ! Vous maîtrisez Python !</h2>
+  <p>Continuez à pratiquer chaque jour. La régularité fait les vrais développeurs.</p>
+  <div class="contact-box">
+    <p>📱 <strong>Moov :</strong> +229 01 58528627</p>
+    <p>📱 <strong>Celtis :</strong> +229 01 48212840</p>
+    <p>🌐 <strong>EbookShop</strong> — Votre librairie numérique</p>
+  </div>
+</div>
+</div>
+<button class="btn-print no-print" onclick="window.print()">🖨️ Sauvegarder en PDF</button>
+</body>
+</html>

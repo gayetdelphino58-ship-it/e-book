@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Maîtriser Excel - De Débutant à Expert</title>
+<style>
+  @media print{.no-print{display:none;}}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',Arial,sans-serif;font-size:15px;line-height:1.8;color:#1a1a2e;background:#fff;}
+  .cover{background:linear-gradient(135deg,#14532d 0%,#15803d 60%,#22c55e 100%);color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 40px;page-break-after:always;}
+  .cover h1{font-size:2.8rem;font-weight:900;margin-bottom:20px;}
+  .cover .subtitle{font-size:1.1rem;color:#bbf7d0;max-width:520px;margin:0 auto 40px;}
+  .cover-icon{font-size:5rem;margin-bottom:24px;}
+  .cover-badge{background:rgba(255,255,255,0.15);padding:8px 24px;border-radius:20px;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:32px;}
+  .cover-contact{margin-top:48px;background:rgba(0,0,0,0.2);padding:20px 36px;border-radius:12px;}
+  .cover-contact p{margin:4px 0;color:#bbf7d0;font-size:0.9rem;}
+  .page{max-width:800px;margin:0 auto;padding:60px 48px;}
+  .toc{background:#f0fdf4;border-left:4px solid #16a34a;padding:32px 40px;border-radius:0 12px 12px 0;margin:40px 0;page-break-after:always;}
+  .toc h2{color:#15803d;margin-bottom:20px;}
+  .toc ol{padding-left:20px;}
+  .toc li{padding:6px 0;color:#374151;}
+  .toc li span{color:#15803d;font-weight:600;}
+  .chapter{page-break-before:always;margin-bottom:60px;}
+  .chapter-num{color:#15803d;font-size:0.85rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+  .chapter h2{font-size:1.9rem;font-weight:800;color:#1a1a2e;margin-bottom:24px;border-bottom:3px solid #22c55e;padding-bottom:12px;}
+  .chapter h3{font-size:1.15rem;font-weight:700;color:#15803d;margin:28px 0 10px;}
+  .chapter p{margin-bottom:16px;color:#374151;}
+  .retenir{background:#f0fdf4;border-left:4px solid #16a34a;padding:20px 24px;border-radius:0 10px 10px 0;margin:24px 0;}
+  .retenir strong{color:#15803d;display:block;margin-bottom:8px;font-size:0.9rem;text-transform:uppercase;}
+  .formule{background:#0f172a;color:#86efac;padding:16px 20px;border-radius:8px;font-family:'Courier New',monospace;font-size:0.9rem;margin:12px 0;}
+  .table-exemple{width:100%;border-collapse:collapse;margin:20px 0;font-size:0.9rem;}
+  .table-exemple th{background:#15803d;color:#fff;padding:10px 14px;text-align:left;}
+  .table-exemple td{padding:8px 14px;border-bottom:1px solid #e5e7eb;}
+  .table-exemple tr:nth-child(even){background:#f0fdf4;}
+  ul.liste{margin:12px 0 20px 20px;}
+  ul.liste li{padding:5px 0;color:#374151;}
+  ul.liste li::marker{color:#22c55e;}
+  .back-cover{background:linear-gradient(135deg,#15803d,#14532d);color:#fff;padding:60px 48px;text-align:center;margin-top:60px;border-radius:16px;}
+  .contact-box{background:rgba(255,255,255,0.15);padding:24px 36px;border-radius:12px;display:inline-block;margin-top:16px;}
+  .contact-box p{color:#fff;margin:6px 0;}
+  .btn-print{position:fixed;bottom:24px;right:24px;background:#15803d;color:#fff;padding:12px 24px;border-radius:30px;font-weight:700;border:none;cursor:pointer;}
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="cover-badge">📊 Guide Complet</div>
+  <div class="cover-icon">📊</div>
+  <h1>Maîtriser Excel</h1>
+  <p class="subtitle">De débutant à expert en formules, tableaux croisés et automatisation</p>
+  <div class="cover-contact">
+    <p><strong>📚 EbookShop</strong></p>
+    <p>📱 Moov : +229 01 58528627 &nbsp;|&nbsp; 📱 Celtis : +229 01 48212840</p>
+  </div>
+</div>
+<div class="page">
+<div class="toc">
+  <h2>📋 Table des Matières</h2>
+  <ol>
+    <li><span>Ch. 1</span> — Découvrir l'interface Excel</li>
+    <li><span>Ch. 2</span> — Saisir et formater des données</li>
+    <li><span>Ch. 3</span> — Les formules essentielles</li>
+    <li><span>Ch. 4</span> — Graphiques et visualisations</li>
+    <li><span>Ch. 5</span> — Tableaux croisés dynamiques</li>
+    <li><span>Ch. 6</span> — Excel pour la comptabilité</li>
+    <li><span>Ch. 7</span> — Introduction aux macros</li>
+    <li><span>Ch. 8</span> — Analyse de données avancée</li>
+  </ol>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 1</div>
+  <h2>Découvrir l'Interface Excel</h2>
+  <p>Microsoft Excel est le tableur le plus utilisé dans le monde professionnel. Maîtriser Excel, c'est avoir un avantage considérable dans n'importe quel emploi ou business. Voici les éléments clés de l'interface :</p>
+  <ul class="liste">
+    <li><strong>Barre de formules :</strong> Affiche le contenu de la cellule sélectionnée. C'est ici que vous saisissez vos formules.</li>
+    <li><strong>Cellules :</strong> Chaque case identifiée par une lettre (colonne) et un chiffre (ligne). Ex : A1, B2, C10.</li>
+    <li><strong>Feuilles :</strong> Les onglets en bas. Un fichier Excel peut contenir plusieurs feuilles.</li>
+    <li><strong>Ruban :</strong> La barre d'outils en haut avec tous les boutons de mise en forme et outils.</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 Raccourcis indispensables</strong>
+    <p>Ctrl+S = Sauvegarder | Ctrl+C = Copier | Ctrl+V = Coller | Ctrl+Z = Annuler | Ctrl+F = Rechercher | Ctrl+Flèche = Naviguer rapidement</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 2</div>
+  <h2>Saisir et Formater des Données</h2>
+  <p>La qualité d'un tableau Excel commence par une bonne organisation des données. Voici les bonnes pratiques :</p>
+  <ul class="liste">
+    <li>Une ligne d'en-tête claire (Nom, Prénom, Montant, Date...)</li>
+    <li>Chaque colonne = un type d'information</li>
+    <li>Chaque ligne = un enregistrement</li>
+    <li>Pas de lignes vides à l'intérieur du tableau</li>
+  </ul>
+  <table class="table-exemple">
+    <tr><th>Nom</th><th>Produit</th><th>Quantité</th><th>Prix unitaire</th><th>Total</th></tr>
+    <tr><td>Amadou</td><td>Savon</td><td>10</td><td>500 FCFA</td><td>5 000 FCFA</td></tr>
+    <tr><td>Fatima</td><td>Huile</td><td>5</td><td>800 FCFA</td><td>4 000 FCFA</td></tr>
+    <tr><td>Jean</td><td>Farine</td><td>20</td><td>300 FCFA</td><td>6 000 FCFA</td></tr>
+  </table>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 3</div>
+  <h2>Les Formules Essentielles</h2>
+  <h3>Formules de base</h3>
+  <div class="formule">=SOMME(A1:A10)         → Additionne les cellules A1 à A10
+=MOYENNE(B1:B10)       → Calcule la moyenne
+=MAX(C1:C10)           → Valeur maximale
+=MIN(C1:C10)           → Valeur minimale
+=NB(D1:D10)            → Compte les cellules non vides
+=NBVAL(D1:D10)         → Compte les cellules avec texte ou nombres</div>
+  <h3>La formule SI (très importante)</h3>
+  <div class="formule">=SI(A1>=10; "Reçu"; "Échoué")
+→ Si A1 est supérieur ou égal à 10, afficher "Reçu", sinon "Échoué"
+
+=SI(B2>1000000; "VIP"; SI(B2>500000; "Standard"; "Basic"))
+→ SI imbriqués pour plusieurs conditions</div>
+  <h3>RECHERCHEV — La formule star</h3>
+  <div class="formule">=RECHERCHEV(valeur_cherchée; tableau; numéro_colonne; 0)
+
+Exemple : Trouver le prix d'un produit à partir de son code :
+=RECHERCHEV(A2; $F$2:$H$100; 2; 0)</div>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Toute formule Excel commence par le signe = (égal). Sans ce signe, Excel considère le contenu comme du texte simple, pas une formule.</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 4</div>
+  <h2>Graphiques et Visualisations</h2>
+  <p>Un graphique communique en quelques secondes ce qu'un tableau de chiffres met des minutes à expliquer. Excel propose une dizaine de types de graphiques.</p>
+  <h3>Créer un graphique en 3 clics</h3>
+  <ul class="liste">
+    <li>1. Sélectionnez vos données (en-têtes inclus)</li>
+    <li>2. Onglet "Insertion" → "Graphiques recommandés"</li>
+    <li>3. Choisissez le type → OK</li>
+  </ul>
+  <h3>Quel graphique pour quelle situation ?</h3>
+  <ul class="liste">
+    <li>📊 <strong>Histogramme/Barres :</strong> Comparer des catégories (ventes par produit)</li>
+    <li>📈 <strong>Courbes :</strong> Évolution dans le temps (ventes mensuelles)</li>
+    <li>🥧 <strong>Secteurs (camembert) :</strong> Parts d'un tout (répartition du budget)</li>
+    <li>🔵 <strong>Nuage de points :</strong> Corrélation entre deux variables</li>
+  </ul>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 5</div>
+  <h2>Tableaux Croisés Dynamiques</h2>
+  <p>Le tableau croisé dynamique (TCD) est l'outil le plus puissant d'Excel. Il permet d'analyser des milliers de lignes de données en quelques secondes, sans une seule formule.</p>
+  <h3>Créer un TCD en 4 étapes</h3>
+  <ul class="liste">
+    <li>1. Cliquez dans votre tableau de données</li>
+    <li>2. Insertion → Tableau croisé dynamique → OK</li>
+    <li>3. Faites glisser les champs dans les zones (Lignes, Colonnes, Valeurs, Filtres)</li>
+    <li>4. Excel calcule tout automatiquement !</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Avec un TCD, vous pouvez en 30 secondes répondre à : "Quels sont mes 5 meilleurs clients ?", "Quel produit se vend le mieux en saison des pluies ?", "Quelle est ma marge par catégorie ?"</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 6</div>
+  <h2>Excel pour la Comptabilité et la Gestion</h2>
+  <h3>Modèle de suivi des dépenses</h3>
+  <table class="table-exemple">
+    <tr><th>Date</th><th>Description</th><th>Catégorie</th><th>Dépense</th><th>Recette</th><th>Solde</th></tr>
+    <tr><td>01/01</td><td>Stock marchandises</td><td>Achats</td><td>50 000</td><td></td><td>=F1-E2+D1</td></tr>
+    <tr><td>03/01</td><td>Vente client Amadou</td><td>Ventes</td><td></td><td>25 000</td><td>=F2-E3+D2</td></tr>
+    <tr><td>05/01</td><td>Loyer boutique</td><td>Charges</td><td>15 000</td><td></td><td>=F3-E4+D3</td></tr>
+  </table>
+  <p>Ce modèle simple vous permet de suivre votre trésorerie en temps réel. Ajoutez une ligne par transaction, le solde se calcule automatiquement.</p>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 7</div>
+  <h2>Introduction aux Macros</h2>
+  <p>Les macros permettent d'automatiser des tâches répétitives. Plutôt que de refaire les mêmes manipulations chaque semaine, vous enregistrez une macro et vous l'exécutez en un clic.</p>
+  <h3>Enregistrer une macro simple</h3>
+  <ul class="liste">
+    <li>1. Onglet "Développeur" → "Enregistrer une macro"</li>
+    <li>2. Donnez-lui un nom et un raccourci clavier (Ex : Ctrl+Maj+F)</li>
+    <li>3. Effectuez les actions à automatiser</li>
+    <li>4. Cliquez "Arrêter l'enregistrement"</li>
+    <li>5. Appuyez sur votre raccourci pour rejouer la macro !</li>
+  </ul>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 8</div>
+  <h2>Analyse de Données Avancée</h2>
+  <h3>La mise en forme conditionnelle</h3>
+  <p>Colorez automatiquement vos cellules selon leur valeur. Ex : rouge si ventes < objectif, vert si ventes > objectif. Sélectionnez les cellules → Accueil → Mise en forme conditionnelle.</p>
+  <h3>Les filtres et tris avancés</h3>
+  <p>Filtrez vos données en un clic : Données → Filtrer. Ensuite, cliquez sur la flèche de chaque colonne pour filtrer par valeur, couleur ou condition.</p>
+  <h3>La fonction SIERREUR</h3>
+  <div class="formule">=SIERREUR(RECHERCHEV(A2;Tableau;2;0); "Non trouvé")
+→ Évite l'affichage des erreurs #N/A dans vos tableaux</div>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Un fichier Excel bien construit peut vous faire économiser des heures de travail chaque semaine. Investissez 2-3 heures pour créer vos modèles une fois, puis bénéficiez-en à vie.</p>
+  </div>
+</div>
+
+<div class="back-cover">
+  <h2>📊 Félicitations, vous maîtrisez Excel !</h2>
+  <p>Ces compétences valent de l'or sur le marché du travail africain et international.</p>
+  <div class="contact-box">
+    <p>📱 <strong>Moov :</strong> +229 01 58528627</p>
+    <p>📱 <strong>Celtis :</strong> +229 01 48212840</p>
+    <p>🌐 <strong>EbookShop</strong> — Votre librairie numérique</p>
+  </div>
+</div>
+</div>
+<button class="btn-print no-print" onclick="window.print()">🖨️ Sauvegarder en PDF</button>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mon Panier — EbookShop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">📚 EbookShop</a>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#catalogue">Catalogue</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="cart.html" class="btn-cart">🛒 Panier <span class="cart-count" id="cartCount">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENU PANIER -->
+  <section style="padding: 60px 0; min-height: 70vh;">
+    <div class="container">
+      <h1 class="page-title">Mon Panier</h1>
+      <p class="page-sub" id="itemCount">0 article(s)</p>
+
+      <div class="cart-layout">
+        <!-- LISTE DES ARTICLES -->
+        <div class="cart-items-box" id="cartItemsContainer">
+          <div class="cart-empty">Chargement...</div>
+        </div>
+
+        <!-- RÉCAPITULATIF -->
+        <div class="cart-summary">
+          <h3>Récapitulatif</h3>
+          <div class="summary-row">
+            <span>Sous-total</span>
+            <span id="cartSubtotal">0,00 €</span>
+          </div>
+          <div class="summary-row">
+            <span>Livraison</span>
+            <span style="color:#059669; font-weight:600;">Gratuite</span>
+          </div>
+          <div class="summary-row">
+            <span>TVA (20%)</span>
+            <span id="cartTax">0,00 €</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total TTC</span>
+            <span id="cartTotal">0,00 €</span>
+          </div>
+
+          <!-- CODE PROMO -->
+          <div class="promo-box">
+            <label>Code promotionnel</label>
+            <div class="promo-input">
+              <input type="text" id="promoCode" placeholder="Ex : EBOOK10" />
+              <button class="btn-promo" onclick="applyPromo()">Appliquer</button>
+            </div>
+            <p id="promoMsg" style="font-size:0.82rem; margin-top:6px;"></p>
+          </div>
+
+          <!-- BOUTON PAIEMENT -->
+          <button class="btn btn-success" onclick="checkout()">
+            🔒 Payer maintenant
+          </button>
+          <p style="font-size:0.8rem; color:#57606a; text-align:center; margin-top:10px;">Paiement 100% sécurisé · SSL</p>
+        </div>
+      </div>
+
+      <!-- CONTINUER LES ACHATS -->
+      <div style="margin-top: 32px;">
+        <a href="index.html#catalogue" style="color:#4f46e5; font-weight:600;">← Continuer mes achats</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 EbookShop — Tous droits réservés | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+    </div>
+  </footer>
+
+  <!-- MODALE DE CONFIRMATION -->
+  <div id="checkoutModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:200; align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:16px; padding:48px 40px; max-width:480px; width:90%; text-align:center;">
+      <div style="font-size:3rem; margin-bottom:16px;">🎉</div>
+      <h2 style="margin-bottom:12px; color:#059669;">Commande confirmée !</h2>
+      <p style="color:#57606a; margin-bottom:24px;">Merci pour votre achat ! Vous recevrez un email avec vos liens de téléchargement sous quelques minutes.</p>
+      <button class="btn btn-primary" onclick="closeModal()">Retour à la boutique</button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="cart.js"></script>
+  <script>
+    function applyPromo() {
+      const code = document.getElementById('promoCode').value.trim().toUpperCase();
+      const msg = document.getElementById('promoMsg');
+      if (code === 'EBOOK10') {
+        msg.style.color = '#059669';
+        msg.textContent = '✅ Code appliqué : -10% sur votre commande !';
+      } else if (code === '') {
+        msg.style.color = '#dc2626';
+        msg.textContent = 'Veuillez entrer un code.';
+      } else {
+        msg.style.color = '#dc2626';
+        msg.textContent = '❌ Code invalide.';
+      }
+    }
+
+    function checkout() {
+      const cart = getCart();
+      if (cart.length === 0) {
+        showToast('⚠️ Votre panier est vide !');
+        return;
+      }
+      const modal = document.getElementById('checkoutModal');
+      modal.style.display = 'flex';
+      localStorage.removeItem('ebookCart');
+      updateCartCount();
+    }
+
+    function closeModal() {
+      document.getElementById('checkoutModal').style.display = 'none';
+      window.location.href = 'index.html';
+    }
+
+    // Calcul TVA live
+    const observer = new MutationObserver(() => {
+      const totalEl = document.getElementById('cartTotal');
+      const taxEl = document.getElementById('cartTax');
+      const subtotalEl = document.getElementById('cartSubtotal');
+      if (subtotalEl && taxEl && totalEl) {
+        const sub = parseFloat(subtotalEl.textContent.replace(',', '.').replace(' €', '')) || 0;
+        const tax = sub * 0.2;
+        const total = sub + tax;
+        taxEl.textContent = tax.toFixed(2).replace('.', ',') + ' €';
+        totalEl.textContent = total.toFixed(2).replace('.', ',') + ' €';
+      }
+    });
+    observer.observe(document.getElementById('cartItemsContainer') || document.body, { childList: true, subtree: true });
+  </script>
+</body>
+</html>

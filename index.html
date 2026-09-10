@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EbookShop — Votre librairie numérique</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">📚 EbookShop</a>
+      <nav class="nav">
+        <a href="#catalogue">Catalogue</a>
+        <a href="#contact">Contact</a>
+        <a href="cart.html" class="btn-cart">🛒 Panier <span class="cart-count" id="cartCount">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">✨ 10 e-books disponibles</div>
+      <h1>La connaissance qui change votre vie</h1>
+      <p>Des e-books de qualité professionnelle sur l'IA, la technologie, le business, la santé et plus encore. Téléchargement immédiat après achat.</p>
+      <div class="hero-btns">
+        <a href="#catalogue" class="btn btn-primary">📚 Voir le catalogue</a>
+        <a href="#contact" class="btn btn-outline">📞 Nous contacter</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>10+</strong><span>E-books</span></div>
+        <div><strong>100%</strong><span>En français</span></div>
+        <div><strong>⚡</strong><span>Téléchargement instantané</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVANTAGES -->
+  <section class="features">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Téléchargement immédiat</h3>
+        <p>Recevez votre e-book en quelques secondes. Lisez-le sur PC, tablette ou smartphone.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h3>Livraison mondiale</h3>
+        <p>Commandez depuis n'importe quel pays. Mobile Money, WhatsApp, paiement simple.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3>Contenu de qualité</h3>
+        <p>Chaque livre est soigneusement rédigé avec des exemples concrets et des exercices pratiques.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Support WhatsApp</h3>
+        <p>Une question ? Contactez-nous directement sur WhatsApp. Réponse rapide garantie.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOGUE -->
+  <section class="catalogue" id="catalogue">
+    <div class="container">
+      <h2 class="section-title">Notre Catalogue Complet</h2>
+      <p class="section-sub">10 e-books en français sur les sujets les plus demandés au monde</p>
+
+      <!-- FILTRES -->
+      <div class="filters">
+        <button class="filter-btn active" onclick="filterBooks('all', event)">Tous (10)</button>
+        <button class="filter-btn" onclick="filterBooks('tech', event)">💻 Technologie</button>
+        <button class="filter-btn" onclick="filterBooks('business', event)">🚀 Business</button>
+        <button class="filter-btn" onclick="filterBooks('sante', event)">🌿 Santé</button>
+        <button class="filter-btn" onclick="filterBooks('perso', event)">🧠 Développement perso</button>
+        <button class="filter-btn" onclick="filterBooks('geo', event)">🗺️ Géomatique</button>
+      </div>
+
+      <div class="books-grid" id="booksGrid">
+
+        <!-- 1. IA -->
+        <div class="book-card" data-cat="tech">
+          <div class="book-cover" style="background:linear-gradient(135deg,#1a1a2e,#4f46e5);">
+            <span>🤖</span>
+          </div>
+          <div class="book-info">
+            <span class="book-cat">Intelligence Artificielle</span>
+            <h3 class="book-title">L'Intelligence Artificielle pour Tous</h3>
+            <p class="book-desc">Comprendre et utiliser l'IA en 2025 — ChatGPT, Machine Learning, opportunités en Afrique.</p>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(128 avis)</span></div>
+            <div class="book-footer">
+              <div>
+                <span class="book-price">9 900 FCFA</span>
+                <span class="book-price-old">15 000 FCFA</span>
+              </div>
+              <div class="book-actions">
+                <a href="books/ebook-ia.html" target="_blank" class="btn-preview">👁️ Aperçu</a>
+                <button class="btn btn-add" onclick="addToCart('L\'IA pour Tous', 9.99, '🤖', '#4f46e5')">+ Panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Python -->
+        <div class="book-card" data-cat="tech">
+          <div class="book-cover" style="background:linear-gradient(135deg,#064e3b,#f59e0b);">
+            <span>🐍</span>
+          </div>
+          <div class="book-info">
+            <span class="book-cat">Programmation</span>
+            <h3 class="book-title">Apprendre Python en 30 Jours</h3>
+            <p class="book-desc">Du zéro au développeur opérationnel. Exercices pratiques, projets réels inclus.</p>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(96 avis)</span></div>
+            <div class="book-footer">
+              <div>
+                <span class="book-price">12 000 FCFA</span>
+                <span class="book-price-old">18 000 FCFA</span>
+              </div>
+              <div class="book-actions">
+                <a href="books/ebook-python.html" target="_blank" class="btn-preview">👁️ Aperçu</a>
+                <button class="btn btn-add" onclick="addToCart('Python en 30 Jours', 12, '🐍', '#059669')">+ Panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Business -->
+        <div class="book-card" data-cat="business">
+          <div class="book-cover" style="background:linear-gradient(135deg,#92400e,#f59e0b);">
+            <span>🚀</span>
+          </div>
+          <div class="book-info">
+            <span class="book-cat">Entrepreneuriat</span>
+            <h3 class="book-title">Lancer son Business en Afrique</h3>
+            <p class="book-desc">De l'idée au premier client. Guide complet pour entrepreneurs africains ambitieux 2025.</p>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(214 avis)</span></div>
+            <div class="book-footer">
+              <div>
+                <span class="book-price">14 900 FCFA</span>
+                <span class="book-price-old">22 000 FCFA</span>
+              </div>
+              <div class="book-actions">
+                <a href="books/ebook-business.html" target="_blank" class="btn-preview">👁️ Aperçu</a>
+                <button class="btn btn-add" onclick="addToCart('Business en Afrique', 14.9, '🚀', '#b45309')">+ Panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Santé -->
+        <div class="book-card" data-cat="sante">
+          <div class="book-cover" style="background:linear-gradient(135deg,#14532d,#22c55e);">
+            <span>🌿</span>
+          </div>
+          <div class="book-info">
+            <span class="book-cat">Santé & Bien-être</span>
+            <h3 class="book-title">Santé Naturelle & Plantes Africaines</h3>
+            <p class="book-desc">Soignez-vous avec la nature. 15 plantes médicinales, remèdes prouvés, recettes naturelles.</p>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(187 avis)</span></div>
+            <div class="book-footer">
+              <div>
+                <span class="book-price">8 900 FCFA</span>
+                <span class="book-price-old">13 000 FCFA</span>
+              </div>
+              <div class="book-actions">
+                <a href="books/ebook-sante.html" target="_blank" class="btn-preview">👁️ Aperçu</a>
+                <button class="btn btn-add" onclick="addToCart('Santé Naturelle', 8.9, '🌿', '#16a34a')">+ Panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Marketing -->
+        <div class="book-card" data-cat="business">
+          <div class="book-cover" style="background:linear-gradient(135deg,#7c0a02,#f43f5e);">
+            <span>📣</span>
+          </div>
+          <div class="book-info">
+            <span class="book-cat">Marketing Digital</span>
+            <h3 class="book-title">Marketing Digital</h3>
+            <p class="book-desc">Attirer des clients et vendre en ligne. Facebook Ads, WhatsApp Business, réseaux sociaux.</p>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(153 avis)</span></div>
+            <div class="book-footer">
+              <div>
+                <span class="book-price">11 500 FCFA</span>
+                <span class="book-price-old">17 000 FCFA</span>
+              </div>
+              <div class="book-actions">
+                <a href="books/ebook-marketing.html" target="_blank" class="btn-preview">👁️ Aperçu</a>
+                <button class="btn btn-add" onclick="addToCart('Marketing Digital', 11.5, '📣', '#be123c')">+ Panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Excel -->
+        <div class="book-card" data-cat="tech">
+          <div class="book-cover" style="background:linear-gradient(135deg,#14532d,#22c55e);">
+            <span>📊</span>
+          </div>
+          <div class="book-info">
+            <span class="book-cat">Bureautique</span>
+            <h3 class="book-title">Maîtriser Excel</h3>
+            <p class="book-desc">De débutant à expert. Formules, tableaux croisés dynamiques, macros et analyse de données.</p>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(241 avis)</span></div>
+            <div class="book-footer">
+              <div>
+                <span class="book-price">9 500 FCFA</span>
+                <span class="book-price-old">14 000 FCFA</span>
+              </div>
+              <div class="book-actions">
+                <a href="books/ebook-excel.html" target="_blank" class="btn-preview">👁️ Aperçu</a>
+                <button class="btn btn-add" onclick="addToCart('Maîtriser Excel', 9.5, '📊', '#15803d')">+ Panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Développement perso -->
+        <div class="book-card" data-cat="perso">
+          <div class="book-cover" style="background:linear-gradient(135deg,#3b0764,#f59e0b);">
+            <span>🦋</span>
+          </div>
+          <div class="book-info">
+            <span class="book-cat">Développement Personnel</span>
+            <h3 class="book-title">Se Réinventer — 21 Jours</h3>
+            <p class="book-desc">Transformer sa vie, ses habitudes et atteindre ses objectifs. Plan d'action concret sur 21 jours.</p>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(309 avis)</span></div>
+            <div class="book-footer">
+              <div>
+                <span class="book-price">10 000 FCFA</span>
+                <span class="book-price-old">15 000 FCFA</span>
+              </div>
+              <div class="book-actions">
+                <a href="books/ebook-developpement-perso.html" target="_blank" class="btn-preview">👁️ Aperçu</a>
+                <button class="btn btn-add" onclick="addToCart('Se Réinventer 21 Jours', 10, '🦋', '#6d28d9')">+ Panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Crypto -->
+        <div class="book-card" data-cat="business">
+          <div class="book-cover" style="background:linear-gradient(135deg,#0c0c0c,#f59e0b);">
+            <span>₿</span>
+          </div>
+          <div class="book-info">
+            <span class="book-cat">Finance & Crypto</span>
+            <h3 class="book-title">Crypto-monnaies 2025</h3>
+            <p class="book-desc">Bitcoin, Ethereum, DeFi, investir intelligemment. Guide complet pour débutants africains.</p>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(178 avis)</span></div>
+            <div class="book-footer">
+              <div>
+                <span class="book-price">13 000 FCFA</span>
+                <span class="book-price-old">20 000 FCFA</span>
+              </div>
+              <div class="book-actions">
+                <a href="books/ebook-crypto.html" target="_blank" class="btn-preview">👁️ Aperçu</a>
+                <button class="btn btn-add" onclick="addToCart('Crypto-monnaies 2025', 13, '₿', '#f59e0b')">+ Panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Réseaux -->
+        <div class="book-card" data-cat="tech">
+          <div class="book-cover" style="background:linear-gradient(135deg,#0c1445,#0891b2);">
+            <span>🌐</span>
+          </div>
+          <div class="book-info">
+            <span class="book-cat">Informatique</span>
+            <h3 class="book-title">Réseaux Informatiques</h3>
+            <p class="book-desc">Comprendre et configurer les réseaux. OSI, TCP/IP, WiFi, sécurité réseau, certification CCNA.</p>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(92 avis)</span></div>
+            <div class="book-footer">
+              <div>
+                <span class="book-price">11 000 FCFA</span>
+                <span class="book-price-old">16 000 FCFA</span>
+              </div>
+              <div class="book-actions">
+                <a href="books/ebook-reseaux.html" target="_blank" class="btn-preview">👁️ Aperçu</a>
+                <button class="btn btn-add" onclick="addToCart('Réseaux Informatiques', 11, '🌐', '#1e3a8a')">+ Panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Géomatique -->
+        <div class="book-card" data-cat="geo">
+          <div class="book-cover" style="background:linear-gradient(135deg,#052e16,#0891b2);">
+            <span>🗺️</span>
+          </div>
+          <div class="book-info">
+            <span class="book-cat">Géomatique & SIG</span>
+            <h3 class="book-title">Introduction à la Géomatique</h3>
+            <p class="book-desc">SIG, télédétection, GPS et cartographie. Applications africaines, QGIS, carrières en géomatique.</p>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span>(67 avis)</span></div>
+            <div class="book-footer">
+              <div>
+                <span class="book-price">12 500 FCFA</span>
+                <span class="book-price-old">19 000 FCFA</span>
+              </div>
+              <div class="book-actions">
+                <a href="books/ebook-geomatique.html" target="_blank" class="btn-preview">👁️ Aperçu</a>
+                <button class="btn btn-add" onclick="addToCart('Introduction à la Géomatique', 12.5, '🗺️', '#166534')">+ Panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- fin books-grid -->
+
+      <!-- OFFRE PACK -->
+      <div class="pack-offer">
+        <div class="pack-left">
+          <div class="pack-badge">🔥 OFFRE SPÉCIALE</div>
+          <h3>Pack Complet — Les 10 E-books</h3>
+          <p>Économisez plus de 50% en achetant tous nos livres en un seul pack !</p>
+          <ul>
+            <li>✅ Les 10 e-books en PDF/HTML</li>
+            <li>✅ Mises à jour gratuites à vie</li>
+            <li>✅ Support WhatsApp prioritaire</li>
+          </ul>
+        </div>
+        <div class="pack-right">
+          <div class="pack-price-old">153 000 FCFA</div>
+          <div class="pack-price">59 900 FCFA</div>
+          <button class="btn btn-pack" onclick="contactWhatsApp('Pack Complet 10 E-books - 59900 FCFA')">
+            📱 Commander via WhatsApp
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMMENT COMMANDER -->
+  <section class="how-to">
+    <div class="container">
+      <h2 class="section-title">Comment Commander ?</h2>
+      <div class="steps-grid">
+        <div class="step"><div class="step-num">1</div><h4>Choisissez votre livre</h4><p>Parcourez notre catalogue et sélectionnez le(s) livre(s) qui vous intéressent.</p></div>
+        <div class="step"><div class="step-num">2</div><h4>Contactez-nous</h4><p>Envoyez-nous le titre par WhatsApp sur l'un de nos numéros.</p></div>
+        <div class="step"><div class="step-num">3</div><h4>Payez simplement</h4><p>Paiement par Moov Money ou Celtis. Paiement rapide et sécurisé.</p></div>
+        <div class="step"><div class="step-num">4</div><h4>Recevez votre livre</h4><p>Votre e-book vous est envoyé immédiatement après confirmation du paiement.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">Ce que disent nos lecteurs</h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Le livre sur le Business en Afrique m'a donné exactement les outils que je cherchais. J'ai lancé mon activité de vente de savons naturels 3 semaines après !"</p>
+          <strong>— Aminata K., Cotonou</strong>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Python en 30 Jours est le meilleur guide que j'ai trouvé en français. Les exemples sont clairs, j'ai créé mon premier programme dès le chapitre 2 !"</p>
+          <strong>— Rodrigue M., Porto-Novo</strong>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <p>"J'ai commandé le Pack Complet et c'est un excellent investissement. Le livre sur les cryptos seul vaut 10x le prix. Merci EbookShop !"</p>
+          <strong>— Ibrahim S., Parakou</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <h2>📞 Contactez-nous</h2>
+      <p>Pour commander, pour toute question ou pour un devis groupé, contactez-nous directement :</p>
+      <div class="contact-cards">
+        <a href="https://wa.me/22901585286" class="contact-card whatsapp" onclick="return true;">
+          <div class="contact-card-icon">📱</div>
+          <div>
+            <strong>Moov Money</strong>
+            <span>+229 01 58528627</span>
+            <small>WhatsApp disponible</small>
+          </div>
+        </a>
+        <a href="https://wa.me/22901482128" class="contact-card celtis">
+          <div class="contact-card-icon">📱</div>
+          <div>
+            <strong>Celtis</strong>
+            <span>+229 01 48212840</span>
+            <small>WhatsApp disponible</small>
+          </div>
+        </a>
+      </div>
+      <p style="margin-top:24px; color:#c7d2fe; font-size:0.9rem;">Nous répondons généralement dans l'heure · Paiement Mobile Money accepté</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo" style="font-size:1.2rem;">📚 EbookShop</span>
+          <p>Votre librairie numérique africaine</p>
+        </div>
+        <div class="footer-links">
+          <a href="#catalogue">Catalogue</a>
+          <a href="#contact">Contact</a>
+          <a href="cart.html">Panier</a>
+        </div>
+        <div class="footer-contact">
+          <p>📱 +229 01 58528627 (Moov)</p>
+          <p>📱 +229 01 48212840 (Celtis)</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 EbookShop — Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- BOUTON WHATSAPP FLOTTANT -->
+  <a href="https://wa.me/22901585286" class="whatsapp-float" title="Commander via WhatsApp">
+    💬
+  </a>
+
+  <script src="cart.js"></script>
+  <script>
+    function filterBooks(cat, e) {
+      const cards = document.querySelectorAll('.book-card');
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      if (e && e.target) e.target.classList.add('active');
+      cards.forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'flex' : 'none';
+      });
+    }
+
+    function contactWhatsApp(product) {
+      const msg = encodeURIComponent('Bonjour ! Je souhaite commander : ' + product);
+      window.open('https://wa.me/22901585286?text=' + msg, '_blank');
+    }
+
+    // Mise à jour addToCart pour inclure icône et couleur
+    function addToCart(name, price, icon, color) {
+      const cart = getCart();
+      const existing = cart.find(item => item.name === name);
+      if (!existing) {
+        cart.push({ name, price, icon: icon || '📖', color: color || '#4f46e5' });
+        saveCart(cart);
+        showToast('✅ "' + name + '" ajouté au panier !');
+      } else {
+        showToast('⚠️ Ce livre est déjà dans votre panier.');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Réseaux Informatiques - Comprendre et Configurer</title>
+<style>
+  @media print{.no-print{display:none;}}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',Arial,sans-serif;font-size:15px;line-height:1.8;color:#1a1a2e;background:#fff;}
+  .cover{background:linear-gradient(135deg,#0c1445 0%,#1e3a8a 50%,#0891b2 100%);color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 40px;page-break-after:always;}
+  .cover h1{font-size:2.8rem;font-weight:900;margin-bottom:20px;}
+  .cover .subtitle{font-size:1.1rem;color:#bae6fd;max-width:520px;margin:0 auto 40px;}
+  .cover-icon{font-size:5rem;margin-bottom:24px;}
+  .cover-badge{background:rgba(255,255,255,0.15);padding:8px 24px;border-radius:20px;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:32px;}
+  .cover-contact{margin-top:48px;background:rgba(0,0,0,0.2);padding:20px 36px;border-radius:12px;}
+  .cover-contact p{margin:4px 0;color:#bae6fd;font-size:0.9rem;}
+  .page{max-width:800px;margin:0 auto;padding:60px 48px;}
+  .toc{background:#eff6ff;border-left:4px solid #1d4ed8;padding:32px 40px;border-radius:0 12px 12px 0;margin:40px 0;page-break-after:always;}
+  .toc h2{color:#1e3a8a;margin-bottom:20px;}
+  .toc ol{padding-left:20px;}
+  .toc li{padding:6px 0;color:#374151;}
+  .toc li span{color:#1e3a8a;font-weight:600;}
+  .chapter{page-break-before:always;margin-bottom:60px;}
+  .chapter-num{color:#1e3a8a;font-size:0.85rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+  .chapter h2{font-size:1.9rem;font-weight:800;color:#1a1a2e;margin-bottom:24px;border-bottom:3px solid #1d4ed8;padding-bottom:12px;}
+  .chapter h3{font-size:1.15rem;font-weight:700;color:#1e3a8a;margin:28px 0 10px;}
+  .chapter p{margin-bottom:16px;color:#374151;}
+  .retenir{background:#eff6ff;border-left:4px solid #1d4ed8;padding:20px 24px;border-radius:0 10px 10px 0;margin:24px 0;}
+  .retenir strong{color:#1e3a8a;display:block;margin-bottom:8px;font-size:0.9rem;text-transform:uppercase;}
+  .code-block{background:#0f172a;color:#7dd3fc;padding:20px 24px;border-radius:10px;font-family:'Courier New',monospace;font-size:0.88rem;margin:16px 0;line-height:1.7;}
+  ul.liste{margin:12px 0 20px 20px;}
+  ul.liste li{padding:5px 0;color:#374151;}
+  ul.liste li::marker{color:#1d4ed8;}
+  .osi-table{width:100%;border-collapse:collapse;margin:20px 0;}
+  .osi-table th{background:#1e3a8a;color:#fff;padding:10px 14px;text-align:left;}
+  .osi-table td{padding:8px 14px;border-bottom:1px solid #e5e7eb;}
+  .osi-table tr:nth-child(even){background:#eff6ff;}
+  .schema{background:#0f172a;color:#e2e8f0;padding:20px 24px;border-radius:10px;font-family:'Courier New',monospace;font-size:0.85rem;margin:16px 0;line-height:1.8;}
+  .back-cover{background:linear-gradient(135deg,#1e3a8a,#0c1445);color:#fff;padding:60px 48px;text-align:center;margin-top:60px;border-radius:16px;}
+  .contact-box{background:rgba(255,255,255,0.15);padding:24px 36px;border-radius:12px;display:inline-block;margin-top:16px;}
+  .contact-box p{color:#bae6fd;margin:6px 0;}
+  .btn-print{position:fixed;bottom:24px;right:24px;background:#1d4ed8;color:#fff;padding:12px 24px;border-radius:30px;font-weight:700;border:none;cursor:pointer;}
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="cover-badge">🌐 Guide Technique</div>
+  <div class="cover-icon">🌐</div>
+  <h1>Réseaux Informatiques</h1>
+  <p class="subtitle">Comprendre, configurer et sécuriser les réseaux — Des bases à la certification CCNA</p>
+  <div class="cover-contact">
+    <p><strong>📚 EbookShop — Votre librairie numérique</strong></p>
+    <p>📱 Moov : +229 01 58528627 &nbsp;|&nbsp; 📱 Celtis : +229 01 48212840</p>
+  </div>
+</div>
+<div class="page">
+<div class="toc">
+  <h2>📋 Table des Matières</h2>
+  <ol>
+    <li><span>Ch. 1</span> — Introduction aux réseaux informatiques</li>
+    <li><span>Ch. 2</span> — Le modèle OSI et TCP/IP</li>
+    <li><span>Ch. 3</span> — Équipements réseau</li>
+    <li><span>Ch. 4</span> — Adressage IP et sous-réseaux</li>
+    <li><span>Ch. 5</span> — WiFi et réseaux sans fil</li>
+    <li><span>Ch. 6</span> — Sécurité des réseaux</li>
+    <li><span>Ch. 7</span> — Réseaux d'entreprise et VPN</li>
+    <li><span>Ch. 8</span> — Carrières et certifications réseau</li>
+  </ol>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 1</div>
+  <h2>Introduction aux Réseaux Informatiques</h2>
+  <p>Un réseau informatique est un ensemble d'appareils (ordinateurs, téléphones, serveurs, imprimantes) interconnectés pour partager des ressources et communiquer. Internet est le plus grand réseau du monde — un "réseau de réseaux".</p>
+  <h3>Types de réseaux</h3>
+  <ul class="liste">
+    <li><strong>LAN (Local Area Network) :</strong> Réseau local — votre box internet chez vous ou dans un bureau.</li>
+    <li><strong>WAN (Wide Area Network) :</strong> Réseau étendu — Internet est un WAN mondial.</li>
+    <li><strong>MAN (Metropolitan Area Network) :</strong> Réseau métropolitain — réseau d'une ville.</li>
+    <li><strong>WLAN (Wireless LAN) :</strong> Réseau local sans fil — le WiFi.</li>
+    <li><strong>VPN (Virtual Private Network) :</strong> Réseau privé virtuel — tunnel sécurisé sur Internet.</li>
+  </ul>
+  <h3>Les topologies réseau</h3>
+  <div class="schema">Topologie en étoile (la plus courante) :
+  
+  [PC1]─┐
+  [PC2]─┤──[SWITCH/ROUTEUR]──Internet
+  [PC3]─┘
+  
+Topologie en bus :
+  [PC1]──[PC2]──[PC3]──[PC4]  (câble unique partagé)
+
+Topologie en anneau :
+  [PC1]──[PC2]──[PC3]──[PC4]──[PC1]</div>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>La topologie en étoile est la plus utilisée aujourd'hui car une panne d'un équipement n'affecte pas les autres. C'est ce que vous avez chez vous : votre box WiFi est le centre de l'étoile.</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 2</div>
+  <h2>Le Modèle OSI et TCP/IP</h2>
+  <p>Le modèle OSI (Open Systems Interconnection) est une référence qui divise la communication réseau en 7 couches. Chaque couche a un rôle précis et communique avec les couches adjacentes.</p>
+  <table class="osi-table">
+    <tr><th>Couche</th><th>Nom</th><th>Rôle</th><th>Exemple</th></tr>
+    <tr><td>7</td><td>Application</td><td>Interface utilisateur</td><td>HTTP, FTP, DNS, SMTP</td></tr>
+    <tr><td>6</td><td>Présentation</td><td>Formatage, chiffrement</td><td>SSL/TLS, JPEG, MP4</td></tr>
+    <tr><td>5</td><td>Session</td><td>Gestion des sessions</td><td>NetBIOS, RPC</td></tr>
+    <tr><td>4</td><td>Transport</td><td>Transmission fiable</td><td>TCP, UDP</td></tr>
+    <tr><td>3</td><td>Réseau</td><td>Adressage et routage</td><td>IP, ICMP (ping)</td></tr>
+    <tr><td>2</td><td>Liaison</td><td>Transmission locale</td><td>Ethernet, WiFi, MAC</td></tr>
+    <tr><td>1</td><td>Physique</td><td>Transmission bits</td><td>Câbles, fibres, ondes</td></tr>
+  </table>
+  <h3>TCP/IP — Le protocole d'Internet</h3>
+  <p>TCP/IP est le protocole universel d'Internet. TCP assure que les données arrivent complètes et dans l'ordre. IP adresse et route les paquets de données à travers les réseaux.</p>
+  <div class="retenir">
+    <strong>💡 Moyen mnémotechnique OSI</strong>
+    <p>"Physique, Liaison, Réseau, Transport, Session, Présentation, Application" → <strong>Pour Lire Réseau, Travaillez Soigneusement, Prenez Action !</strong></p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 3</div>
+  <h2>Équipements Réseau</h2>
+  <ul class="liste">
+    <li>🔌 <strong>Hub :</strong> Équipement basique qui envoie les données à TOUS les appareils connectés. Obsolète, peu efficace.</li>
+    <li>🔀 <strong>Switch (Commutateur) :</strong> Plus intelligent que le hub — envoie les données uniquement à l'appareil destinataire. Base du réseau local.</li>
+    <li>📡 <strong>Routeur :</strong> Connecte différents réseaux entre eux (votre réseau local ↔ Internet). Votre "box" est un routeur.</li>
+    <li>🛡️ <strong>Firewall :</strong> Filtre le trafic réseau pour bloquer les menaces. Premier rempart de sécurité.</li>
+    <li>📶 <strong>Point d'accès WiFi (AP) :</strong> Crée un réseau sans fil dans une zone.</li>
+    <li>⚡ <strong>Modem :</strong> Convertit le signal Internet (fibre, ADSL) en signal réseau utilisable.</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Votre box FAI (Moov Fibre, MTN...) est en réalité un appareil multifonction : modem + routeur + switch + point d'accès WiFi. Un appareil, 4 fonctions !</p>
+  </div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 4</div>
+  <h2>Adressage IP et Sous-réseaux</h2>
+  <p>Chaque appareil sur un réseau possède une adresse IP unique, comme une adresse postale. Il existe deux versions : IPv4 (ex : 192.168.1.1) et IPv6 (ex : 2001:db8::1).</p>
+  <h3>Classes d'adresses IPv4</h3>
+  <div class="schema">Adresses PRIVÉES (réseau local) :
+  Classe A : 10.0.0.0      – 10.255.255.255
+  Classe B : 172.16.0.0    – 172.31.255.255
+  Classe C : 192.168.0.0   – 192.168.255.255
+
+Adresses PUBLIQUES : attribuées par votre FAI
+  Votre box a une IP publique (ex: 197.234.x.x)
+  Vos appareils ont des IP privées (192.168.1.x)</div>
+  <h3>Le masque de sous-réseau</h3>
+  <div class="schema">Réseau typique à la maison :
+  IP de la box        : 192.168.1.1
+  IP de votre PC      : 192.168.1.100
+  IP de votre téléphone: 192.168.1.101
+  Masque              : 255.255.255.0 (ou /24)
+  
+Commande pour voir son IP (Windows) : ipconfig
+Commande pour voir son IP (Linux/Mac): ip addr  ou  ifconfig</div>
+  <h3>Commandes réseau utiles</h3>
+  <div class="code-block">ping 8.8.8.8          → Tester la connexion à Google
+ping 192.168.1.1      → Tester la connexion au routeur
+ipconfig /all         → Afficher toutes les infos réseau (Windows)
+tracert google.com    → Tracer le chemin vers un serveur
+nslookup google.com   → Résolution DNS</div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 5</div>
+  <h2>WiFi et Réseaux Sans Fil</h2>
+  <p>Le WiFi (Wireless Fidelity) utilise des ondes radio pour connecter les appareils sans câble. Les standards WiFi évoluent régulièrement pour plus de vitesse et de portée.</p>
+  <table class="osi-table">
+    <tr><th>Standard</th><th>Nom</th><th>Vitesse max</th><th>Fréquence</th></tr>
+    <tr><td>802.11n</td><td>WiFi 4</td><td>600 Mbps</td><td>2.4/5 GHz</td></tr>
+    <tr><td>802.11ac</td><td>WiFi 5</td><td>3.5 Gbps</td><td>5 GHz</td></tr>
+    <tr><td>802.11ax</td><td>WiFi 6</td><td>9.6 Gbps</td><td>2.4/5/6 GHz</td></tr>
+  </table>
+  <h3>Sécuriser son WiFi</h3>
+  <ul class="liste">
+    <li>🔒 Utiliser WPA3 (ou minimum WPA2) — jamais WEP (trop vulnérable)</li>
+    <li>🔑 Mot de passe fort : 12+ caractères, majuscules, chiffres, symboles</li>
+    <li>📶 Changer le nom du réseau (SSID) par défaut</li>
+    <li>🚫 Désactiver le WPS (vulnérabilité connue)</li>
+    <li>🔄 Mettre à jour le firmware du routeur régulièrement</li>
+  </ul>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 6</div>
+  <h2>Sécurité des Réseaux</h2>
+  <p>La cybersécurité est l'un des domaines informatiques les plus demandés et les mieux payés. Les entreprises cherchent désespérément des experts pour protéger leurs systèmes.</p>
+  <h3>Les principales menaces réseau</h3>
+  <ul class="liste">
+    <li>🦠 <strong>Malwares :</strong> Virus, trojans, ransomwares qui infectent les systèmes.</li>
+    <li>🎣 <strong>Phishing :</strong> Faux emails/sites pour voler mots de passe et données.</li>
+    <li>💥 <strong>DDoS :</strong> Attaque par saturation — inonder un serveur de requêtes jusqu'à la panne.</li>
+    <li>🕵️ <strong>Man in the Middle :</strong> Intercepter la communication entre deux parties.</li>
+    <li>🔓 <strong>SQL Injection :</strong> Exploiter les failles de bases de données web.</li>
+  </ul>
+  <h3>Les défenses essentielles</h3>
+  <ul class="liste">
+    <li>🛡️ Firewall (pare-feu) bien configuré</li>
+    <li>🔒 Chiffrement des données (HTTPS, VPN)</li>
+    <li>🔄 Mises à jour régulières de tous les systèmes</li>
+    <li>👤 Principe du moindre privilège (chaque utilisateur n'a accès qu'à ce dont il a besoin)</li>
+    <li>💾 Sauvegardes régulières (règle 3-2-1)</li>
+  </ul>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 7</div>
+  <h2>Réseaux d'Entreprise et VPN</h2>
+  <p>Les entreprises ont des besoins réseau plus complexes que les particuliers. La sécurité, la haute disponibilité et la scalabilité sont prioritaires.</p>
+  <h3>Le VPN (Virtual Private Network)</h3>
+  <p>Un VPN crée un tunnel chiffré entre votre appareil et un serveur distant. Utilisations principales :</p>
+  <ul class="liste">
+    <li>🔒 Sécuriser les connexions des employés en télétravail</li>
+    <li>🌍 Contourner les restrictions géographiques</li>
+    <li>🕵️ Préserver la vie privée (masquer son IP)</li>
+    <li>🏢 Connecter les bureaux distants d'une entreprise</li>
+  </ul>
+  <div class="code-block"># Exemple de configuration OpenVPN sur Linux
+sudo apt install openvpn
+sudo openvpn --config votre-config.ovpn
+
+# Vérifier votre nouvelle IP
+curl ifconfig.me</div>
+</div>
+
+<div class="chapter">
+  <div class="chapter-num">Chapitre 8</div>
+  <h2>Carrières et Certifications Réseau</h2>
+  <p>Les métiers des réseaux informatiques sont parmi les mieux rémunérés du secteur IT, avec une forte demande en Afrique et à l'international.</p>
+  <h3>Les certifications les plus reconnues</h3>
+  <ul class="liste">
+    <li>🥇 <strong>CCNA (Cisco Certified Network Associate) :</strong> La certification réseau la plus connue. Salaire moyen : 1 200 – 3 000 €/mois en Europe.</li>
+    <li>🥈 <strong>CompTIA Network+ :</strong> Certification généraliste reconnue mondialement.</li>
+    <li>🥉 <strong>CompTIA Security+ :</strong> Spécialisation cybersécurité, très demandée.</li>
+    <li>⭐ <strong>CCNP (Cisco Certified Network Professional) :</strong> Niveau avancé après CCNA.</li>
+  </ul>
+  <h3>Plan de carrière recommandé</h3>
+  <ul class="liste">
+    <li>Mois 1-3 : Bases réseaux (ce livre + ressources YouTube)</li>
+    <li>Mois 4-6 : Préparation CompTIA Network+ (200-300 €)</li>
+    <li>Mois 7-12 : Préparation CCNA (300 €)</li>
+    <li>Après CCNA : Emploi en entreprise ou freelance international</li>
+  </ul>
+  <div class="retenir">
+    <strong>💡 À Retenir</strong>
+    <p>Un technicien réseau certifié CCNA au Bénin peut décrocher des contrats freelance sur Upwork et Fiverr avec des clients américains et européens, facturant 30-80$/heure.</p>
+  </div>
+</div>
+
+<div class="back-cover">
+  <h2>🌐 Les réseaux, c'est l'avenir !</h2>
+  <p>Maîtriser les réseaux, c'est maîtriser l'infrastructure de toute l'économie numérique mondiale.</p>
+  <div class="contact-box">
+    <p>📱 <strong>Moov :</strong> +229 01 58528627</p>
+    <p>📱 <strong>Celtis :</strong> +229 01 48212840</p>
+    <p>🌐 <strong>EbookShop</strong> — Votre librairie numérique</p>
+  </div>
+</div>
+</div>
+<button class="btn-print no-print" onclick="window.print()">🖨️ Sauvegarder en PDF</button>
+</body>
+</html>
